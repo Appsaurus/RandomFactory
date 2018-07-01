@@ -1,0 +1,2421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"RandomFactory::RandomFactoryPackageTests::ProductTarget" /* RandomFactoryPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_290 /* Build configuration list for PBXAggregateTarget "RandomFactoryPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_293 /* PBXTargetDependency */,
+			);
+			name = RandomFactoryPackageTests;
+			productName = RandomFactoryPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_154 /* AdorableAvatarImageURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* AdorableAvatarImageURLProvider.swift */; };
+		OBJ_155 /* AvatarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* AvatarExtensions.swift */; };
+		OBJ_156 /* AvatarImageURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* AvatarImageURLBuilder.swift */; };
+		OBJ_157 /* GravatarImageURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* GravatarImageURLProvider.swift */; };
+		OBJ_158 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* MD5.swift */; };
+		OBJ_165 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* Package.swift */; };
+		OBJ_171 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* AnyCodable.swift */; };
+		OBJ_172 /* GenericDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* GenericDecodingContainer.swift */; };
+		OBJ_173 /* InvalidElementStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* InvalidElementStrategy.swift */; };
+		OBJ_174 /* KeyedDecodingContainer+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* KeyedDecodingContainer+Any.swift */; };
+		OBJ_175 /* KeyedEncodingContainer+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* KeyedEncodingContainer+Any.swift */; };
+		OBJ_176 /* RawCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* RawCodingKey.swift */; };
+		OBJ_183 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* Package.swift */; };
+		OBJ_189 /* AnyCodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* AnyCodableExtensions.swift */; };
+		OBJ_190 /* Codable+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Codable+iso8601.swift */; };
+		OBJ_191 /* CodableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* CodableDefaults.swift */; };
+		OBJ_192 /* CodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CodableExtensions.swift */; };
+		OBJ_193 /* DecoderUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* DecoderUpdatable.swift */; };
+		OBJ_194 /* ReflectionCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ReflectionCodable.swift */; };
+		OBJ_196 /* Codability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codability::Codability::Product" /* Codability.framework */; };
+		OBJ_197 /* RuntimeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */; };
+		OBJ_198 /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Runtime::Runtime::Product" /* Runtime.framework */; };
+		OBJ_209 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* Package.swift */; };
+		OBJ_215 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* Config.swift */; };
+		OBJ_216 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* Parser.swift */; };
+		OBJ_217 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Provider.swift */; };
+		OBJ_218 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* ArrayExtension.swift */; };
+		OBJ_219 /* Faker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* Faker.swift */; };
+		OBJ_220 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* Address.swift */; };
+		OBJ_221 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* App.swift */; };
+		OBJ_222 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* Bank.swift */; };
+		OBJ_223 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* Business.swift */; };
+		OBJ_224 /* Commerce.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Commerce.swift */; };
+		OBJ_225 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Company.swift */; };
+		OBJ_226 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Generator.swift */; };
+		OBJ_227 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Internet.swift */; };
+		OBJ_228 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Lorem.swift */; };
+		OBJ_229 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Name.swift */; };
+		OBJ_230 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* Number.swift */; };
+		OBJ_231 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* PhoneNumber.swift */; };
+		OBJ_232 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* Team.swift */; };
+		OBJ_233 /* LinuxRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* LinuxRandom.swift */; };
+		OBJ_234 /* en.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* en.swift */; };
+		OBJ_241 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* Package.swift */; };
+		OBJ_247 /* ImageURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_91 /* ImageURLProvider.swift */; };
+		OBJ_248 /* PlaceholderImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_92 /* PlaceholderImageGenerator.swift */; };
+		OBJ_249 /* DummyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_94 /* DummyImage.swift */; };
+		OBJ_250 /* LoremFlickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* LoremFlickr.swift */; };
+		OBJ_251 /* LoremPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* LoremPixel.swift */; };
+		OBJ_252 /* PlaceImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* PlaceImg.swift */; };
+		OBJ_253 /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Unsplash.swift */; };
+		OBJ_260 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_90 /* Package.swift */; };
+		OBJ_266 /* ContentKeywords.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* ContentKeywords.swift */; };
+		OBJ_267 /* RandomInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* RandomInitializable.swift */; };
+		OBJ_269 /* CodableExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodableExtensions::CodableExtensions::Product" /* CodableExtensions.framework */; };
+		OBJ_270 /* Codability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codability::Codability::Product" /* Codability.framework */; };
+		OBJ_271 /* RuntimeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */; };
+		OBJ_272 /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Runtime::Runtime::Product" /* Runtime.framework */; };
+		OBJ_273 /* PlaceholderImages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PlaceholderImages::PlaceholderImages::Product" /* PlaceholderImages.framework */; };
+		OBJ_274 /* Avatars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Avatars::Avatars::Product" /* Avatars.framework */; };
+		OBJ_275 /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Fakery::Fakery::Product" /* Fakery.framework */; };
+		OBJ_288 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_299 /* SharedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* SharedTests.swift */; };
+		OBJ_301 /* SwiftTestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftTestUtils::SwiftTestUtils::Product" /* SwiftTestUtils.framework */; };
+		OBJ_302 /* RandomFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "RandomFactory::RandomFactory::Product" /* RandomFactory.framework */; };
+		OBJ_303 /* CodableExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodableExtensions::CodableExtensions::Product" /* CodableExtensions.framework */; };
+		OBJ_304 /* Codability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Codability::Codability::Product" /* Codability.framework */; };
+		OBJ_305 /* RuntimeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */; };
+		OBJ_306 /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Runtime::Runtime::Product" /* Runtime.framework */; };
+		OBJ_307 /* PlaceholderImages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "PlaceholderImages::PlaceholderImages::Product" /* PlaceholderImages.framework */; };
+		OBJ_308 /* Avatars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Avatars::Avatars::Product" /* Avatars.framework */; };
+		OBJ_309 /* Fakery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Fakery::Fakery::Product" /* Fakery.framework */; };
+		OBJ_324 /* DefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* DefaultValue.swift */; };
+		OBJ_325 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Factory.swift */; };
+		OBJ_326 /* ClassHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ClassHeader.swift */; };
+		OBJ_327 /* ClassMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ClassMetadataLayout.swift */; };
+		OBJ_328 /* EnumMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* EnumMetadataLayout.swift */; };
+		OBJ_329 /* ExistentialContainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ExistentialContainter.swift */; };
+		OBJ_330 /* FunctionMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* FunctionMetadataLayout.swift */; };
+		OBJ_331 /* MetadataLayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* MetadataLayoutType.swift */; };
+		OBJ_332 /* NominalMetadataLayoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* NominalMetadataLayoutType.swift */; };
+		OBJ_333 /* NominalTypeDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* NominalTypeDescriptor.swift */; };
+		OBJ_334 /* ProtocolDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ProtocolDescriptor.swift */; };
+		OBJ_335 /* ProtocolMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ProtocolMetadataLayout.swift */; };
+		OBJ_336 /* ProtocolTypeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* ProtocolTypeContainer.swift */; };
+		OBJ_337 /* StructMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* StructMetadataLayout.swift */; };
+		OBJ_338 /* TupleMetadataLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* TupleMetadataLayout.swift */; };
+		OBJ_339 /* ValueWitnessTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* ValueWitnessTable.swift */; };
+		OBJ_340 /* ClassMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* ClassMetadata.swift */; };
+		OBJ_341 /* EnumMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* EnumMetadata.swift */; };
+		OBJ_342 /* FuntionMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* FuntionMetadata.swift */; };
+		OBJ_343 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Metadata.swift */; };
+		OBJ_344 /* MetadataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* MetadataType.swift */; };
+		OBJ_345 /* NominalMetadataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* NominalMetadataType.swift */; };
+		OBJ_346 /* ProtocolMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* ProtocolMetadata.swift */; };
+		OBJ_347 /* StructMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* StructMetadata.swift */; };
+		OBJ_348 /* TupleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* TupleMetadata.swift */; };
+		OBJ_349 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Errors.swift */; };
+		OBJ_350 /* FunctionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* FunctionInfo.swift */; };
+		OBJ_351 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Kind.swift */; };
+		OBJ_352 /* PropertyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* PropertyInfo.swift */; };
+		OBJ_353 /* TypeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* TypeInfo.swift */; };
+		OBJ_354 /* TypeInfoConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* TypeInfoConvertible.swift */; };
+		OBJ_355 /* Pointers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Pointers.swift */; };
+		OBJ_356 /* RelativePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* RelativePointer.swift */; };
+		OBJ_357 /* RelativeVectorPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* RelativeVectorPointer.swift */; };
+		OBJ_358 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Vector.swift */; };
+		OBJ_359 /* GettersSetters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* GettersSetters.swift */; };
+		OBJ_360 /* IntegerConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* IntegerConvertible.swift */; };
+		OBJ_361 /* Pointer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Pointer+Extensions.swift */; };
+		OBJ_362 /* RetainCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* RetainCounts.swift */; };
+		OBJ_363 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* String+Extensions.swift */; };
+		OBJ_369 /* EmptyInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* EmptyInitializable.swift */; };
+		OBJ_370 /* EnumUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* EnumUtils.swift */; };
+		OBJ_371 /* GlobalRuntimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* GlobalRuntimeFunctions.swift */; };
+		OBJ_372 /* KVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* KVC.swift */; };
+		OBJ_374 /* Runtime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Runtime::Runtime::Product" /* Runtime.framework */; };
+		OBJ_381 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Package.swift */; };
+		OBJ_387 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Package.swift */; };
+		OBJ_392 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* BaseTestCase.swift */; };
+		OBJ_393 /* LinuxTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_136 /* LinuxTestable.swift */; };
+		OBJ_394 /* XCAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_137 /* XCAssertions.swift */; };
+		OBJ_401 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4403A9B20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codability::Codability";
+			remoteInfo = Codability;
+		};
+		E4403A9C20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RuntimeExtensions::RuntimeExtensions";
+			remoteInfo = RuntimeExtensions;
+		};
+		E4403A9D20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Runtime::Runtime";
+			remoteInfo = Runtime;
+		};
+		E4403A9E20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Runtime::Runtime";
+			remoteInfo = Runtime;
+		};
+		E4403A9F20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodableExtensions::CodableExtensions";
+			remoteInfo = CodableExtensions;
+		};
+		E4403AA020E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codability::Codability";
+			remoteInfo = Codability;
+		};
+		E4403AA120E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RuntimeExtensions::RuntimeExtensions";
+			remoteInfo = RuntimeExtensions;
+		};
+		E4403AA220E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Runtime::Runtime";
+			remoteInfo = Runtime;
+		};
+		E4403AA320E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PlaceholderImages::PlaceholderImages";
+			remoteInfo = PlaceholderImages;
+		};
+		E4403AA420E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Avatars::Avatars";
+			remoteInfo = Avatars;
+		};
+		E4403AA520E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Fakery::Fakery";
+			remoteInfo = Fakery;
+		};
+		E4403AA620E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftTestUtils::SwiftTestUtils";
+			remoteInfo = SwiftTestUtils;
+		};
+		E4403AA720E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RandomFactory::RandomFactory";
+			remoteInfo = RandomFactory;
+		};
+		E4403AA820E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodableExtensions::CodableExtensions";
+			remoteInfo = CodableExtensions;
+		};
+		E4403AA920E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Codability::Codability";
+			remoteInfo = Codability;
+		};
+		E4403AAA20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RuntimeExtensions::RuntimeExtensions";
+			remoteInfo = RuntimeExtensions;
+		};
+		E4403AAB20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Runtime::Runtime";
+			remoteInfo = Runtime;
+		};
+		E4403AAC20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "PlaceholderImages::PlaceholderImages";
+			remoteInfo = PlaceholderImages;
+		};
+		E4403AAD20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Avatars::Avatars";
+			remoteInfo = Avatars;
+		};
+		E4403AAE20E2C7BD002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Fakery::Fakery";
+			remoteInfo = Fakery;
+		};
+		E4403AAF20E2C7BE002AF54F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "RandomFactory::RandomFactoryTests";
+			remoteInfo = RandomFactoryTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Avatars::Avatars::Product" /* Avatars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Avatars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Codability::Codability::Product" /* Codability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Codability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CodableExtensions::CodableExtensions::Product" /* CodableExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodableExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4403AB020E2C7D0002AF54F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"Fakery::Fakery::Product" /* Fakery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Fakery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_100 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/Avatars--8182117753673074398/Package.swift"; sourceTree = "<group>"; };
+		OBJ_101 /* AdorableAvatarImageURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdorableAvatarImageURLProvider.swift; sourceTree = "<group>"; };
+		OBJ_102 /* AvatarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarExtensions.swift; sourceTree = "<group>"; };
+		OBJ_103 /* AvatarImageURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageURLBuilder.swift; sourceTree = "<group>"; };
+		OBJ_104 /* GravatarImageURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravatarImageURLProvider.swift; sourceTree = "<group>"; };
+		OBJ_105 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		OBJ_108 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		OBJ_11 /* SharedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTests.swift; sourceTree = "<group>"; };
+		OBJ_110 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		OBJ_111 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		OBJ_113 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		OBJ_114 /* Faker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faker.swift; sourceTree = "<group>"; };
+		OBJ_116 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		OBJ_117 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		OBJ_118 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		OBJ_119 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		OBJ_12 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = SOURCE_ROOT; };
+		OBJ_120 /* Commerce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commerce.swift; sourceTree = "<group>"; };
+		OBJ_121 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		OBJ_122 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		OBJ_123 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		OBJ_124 /* Lorem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
+		OBJ_125 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		OBJ_126 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		OBJ_127 /* PhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		OBJ_128 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		OBJ_129 /* LinuxRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxRandom.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
+		OBJ_131 /* en.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = en.swift; sourceTree = "<group>"; };
+		OBJ_132 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/Fakery-221094682421023059/Package.swift"; sourceTree = "<group>"; };
+		OBJ_134 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/SwiftTestUtils-3371106396395558887/Package.swift"; sourceTree = "<group>"; };
+		OBJ_135 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		OBJ_136 /* LinuxTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxTestable.swift; sourceTree = "<group>"; };
+		OBJ_137 /* XCAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAssertions.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Info; sourceTree = SOURCE_ROOT; };
+		OBJ_15 /* RandomFactoryTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RandomFactoryTests; sourceTree = SOURCE_ROOT; };
+		OBJ_18 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/CodableExtensions-8282131651046527428/Package.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* AnyCodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodableExtensions.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Codable+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+iso8601.swift"; sourceTree = "<group>"; };
+		OBJ_21 /* CodableDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDefaults.swift; sourceTree = "<group>"; };
+		OBJ_22 /* CodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableExtensions.swift; sourceTree = "<group>"; };
+		OBJ_23 /* DecoderUpdatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderUpdatable.swift; sourceTree = "<group>"; };
+		OBJ_24 /* ReflectionCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionCodable.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/RuntimeExtensions--5719776098590849474/Package.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* EmptyInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInitializable.swift; sourceTree = "<group>"; };
+		OBJ_28 /* EnumUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtils.swift; sourceTree = "<group>"; };
+		OBJ_29 /* GlobalRuntimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalRuntimeFunctions.swift; sourceTree = "<group>"; };
+		OBJ_30 /* KVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVC.swift; sourceTree = "<group>"; };
+		OBJ_34 /* DefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValue.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		OBJ_37 /* ClassHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassHeader.swift; sourceTree = "<group>"; };
+		OBJ_38 /* ClassMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_39 /* EnumMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_40 /* ExistentialContainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistentialContainter.swift; sourceTree = "<group>"; };
+		OBJ_41 /* FunctionMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_42 /* MetadataLayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataLayoutType.swift; sourceTree = "<group>"; };
+		OBJ_43 /* NominalMetadataLayoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominalMetadataLayoutType.swift; sourceTree = "<group>"; };
+		OBJ_44 /* NominalTypeDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominalTypeDescriptor.swift; sourceTree = "<group>"; };
+		OBJ_45 /* ProtocolDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescriptor.swift; sourceTree = "<group>"; };
+		OBJ_46 /* ProtocolMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_47 /* ProtocolTypeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTypeContainer.swift; sourceTree = "<group>"; };
+		OBJ_48 /* StructMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_49 /* TupleMetadataLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleMetadataLayout.swift; sourceTree = "<group>"; };
+		OBJ_50 /* ValueWitnessTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueWitnessTable.swift; sourceTree = "<group>"; };
+		OBJ_52 /* ClassMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassMetadata.swift; sourceTree = "<group>"; };
+		OBJ_53 /* EnumMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumMetadata.swift; sourceTree = "<group>"; };
+		OBJ_54 /* FuntionMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuntionMetadata.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		OBJ_56 /* MetadataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataType.swift; sourceTree = "<group>"; };
+		OBJ_57 /* NominalMetadataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominalMetadataType.swift; sourceTree = "<group>"; };
+		OBJ_58 /* ProtocolMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolMetadata.swift; sourceTree = "<group>"; };
+		OBJ_59 /* StructMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructMetadata.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* TupleMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleMetadata.swift; sourceTree = "<group>"; };
+		OBJ_62 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		OBJ_63 /* FunctionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionInfo.swift; sourceTree = "<group>"; };
+		OBJ_64 /* Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		OBJ_65 /* PropertyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyInfo.swift; sourceTree = "<group>"; };
+		OBJ_66 /* TypeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInfo.swift; sourceTree = "<group>"; };
+		OBJ_67 /* TypeInfoConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeInfoConvertible.swift; sourceTree = "<group>"; };
+		OBJ_69 /* Pointers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pointers.swift; sourceTree = "<group>"; };
+		OBJ_70 /* RelativePointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePointer.swift; sourceTree = "<group>"; };
+		OBJ_71 /* RelativeVectorPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVectorPointer.swift; sourceTree = "<group>"; };
+		OBJ_72 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		OBJ_74 /* GettersSetters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettersSetters.swift; sourceTree = "<group>"; };
+		OBJ_75 /* IntegerConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerConvertible.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Pointer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pointer+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_77 /* RetainCounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetainCounts.swift; sourceTree = "<group>"; };
+		OBJ_78 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_79 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/Runtime--6253572251645273876/Package.swift"; sourceTree = "<group>"; };
+		OBJ_8 /* ContentKeywords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentKeywords.swift; sourceTree = "<group>"; };
+		OBJ_82 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		OBJ_83 /* GenericDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDecodingContainer.swift; sourceTree = "<group>"; };
+		OBJ_84 /* InvalidElementStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidElementStrategy.swift; sourceTree = "<group>"; };
+		OBJ_85 /* KeyedDecodingContainer+Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Any.swift"; sourceTree = "<group>"; };
+		OBJ_86 /* KeyedEncodingContainer+Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedEncodingContainer+Any.swift"; sourceTree = "<group>"; };
+		OBJ_87 /* RawCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawCodingKey.swift; sourceTree = "<group>"; };
+		OBJ_88 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/Codability.git--661166634494793555/Package.swift"; sourceTree = "<group>"; };
+		OBJ_9 /* RandomInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomInitializable.swift; sourceTree = "<group>"; };
+		OBJ_90 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/brianstrobach/Appsaurus/CompanyProjects/OpenSource/swift/RandomFactory/.build/checkouts/PlaceholderImages-2840289607096967909/Package.swift"; sourceTree = "<group>"; };
+		OBJ_91 /* ImageURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLProvider.swift; sourceTree = "<group>"; };
+		OBJ_92 /* PlaceholderImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageGenerator.swift; sourceTree = "<group>"; };
+		OBJ_94 /* DummyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyImage.swift; sourceTree = "<group>"; };
+		OBJ_95 /* LoremFlickr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremFlickr.swift; sourceTree = "<group>"; };
+		OBJ_96 /* LoremPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPixel.swift; sourceTree = "<group>"; };
+		OBJ_97 /* PlaceImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImg.swift; sourceTree = "<group>"; };
+		OBJ_98 /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
+		"PlaceholderImages::PlaceholderImages::Product" /* PlaceholderImages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PlaceholderImages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"RandomFactory::RandomFactory::Product" /* RandomFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RandomFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"RandomFactory::RandomFactoryTests::Product" /* RandomFactoryTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = RandomFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Runtime::Runtime::Product" /* Runtime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Runtime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RuntimeExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftTestUtils::SwiftTestUtils::Product" /* SwiftTestUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftTestUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_196 /* Codability.framework in Frameworks */,
+				OBJ_197 /* RuntimeExtensions.framework in Frameworks */,
+				OBJ_198 /* Runtime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_269 /* CodableExtensions.framework in Frameworks */,
+				OBJ_270 /* Codability.framework in Frameworks */,
+				OBJ_271 /* RuntimeExtensions.framework in Frameworks */,
+				OBJ_272 /* Runtime.framework in Frameworks */,
+				OBJ_273 /* PlaceholderImages.framework in Frameworks */,
+				OBJ_274 /* Avatars.framework in Frameworks */,
+				OBJ_275 /* Fakery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_301 /* SwiftTestUtils.framework in Frameworks */,
+				OBJ_302 /* RandomFactory.framework in Frameworks */,
+				OBJ_303 /* CodableExtensions.framework in Frameworks */,
+				OBJ_304 /* Codability.framework in Frameworks */,
+				OBJ_305 /* RuntimeExtensions.framework in Frameworks */,
+				OBJ_306 /* Runtime.framework in Frameworks */,
+				OBJ_307 /* PlaceholderImages.framework in Frameworks */,
+				OBJ_308 /* Avatars.framework in Frameworks */,
+				OBJ_309 /* Fakery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_374 /* Runtime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_10 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* SharedTests.swift */,
+			);
+			name = Tests;
+			path = RandomFactoryTests/Shared;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_106 /* Fakery 3.3.9 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_107 /* Fakery */,
+				OBJ_132 /* Package.swift */,
+			);
+			name = "Fakery 3.3.9";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_107 /* Fakery */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_108 /* Config.swift */,
+				OBJ_109 /* Data */,
+				OBJ_112 /* Extensions */,
+				OBJ_114 /* Faker.swift */,
+				OBJ_115 /* Generators */,
+				OBJ_129 /* LinuxRandom.swift */,
+				OBJ_130 /* Locales */,
+			);
+			name = Fakery;
+			path = ".build/checkouts/Fakery-221094682421023059/Sources/Fakery";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_109 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_110 /* Parser.swift */,
+				OBJ_111 /* Provider.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		OBJ_112 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_113 /* ArrayExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_115 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_116 /* Address.swift */,
+				OBJ_117 /* App.swift */,
+				OBJ_118 /* Bank.swift */,
+				OBJ_119 /* Business.swift */,
+				OBJ_120 /* Commerce.swift */,
+				OBJ_121 /* Company.swift */,
+				OBJ_122 /* Generator.swift */,
+				OBJ_123 /* Internet.swift */,
+				OBJ_124 /* Lorem.swift */,
+				OBJ_125 /* Name.swift */,
+				OBJ_126 /* Number.swift */,
+				OBJ_127 /* PhoneNumber.swift */,
+				OBJ_128 /* Team.swift */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		OBJ_130 /* Locales */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_131 /* en.swift */,
+			);
+			path = Locales;
+			sourceTree = "<group>";
+		};
+		OBJ_133 /* SwiftTestUtils 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_134 /* Package.swift */,
+				OBJ_135 /* BaseTestCase.swift */,
+				OBJ_136 /* LinuxTestable.swift */,
+				OBJ_137 /* XCAssertions.swift */,
+			);
+			name = "SwiftTestUtils 1.0.0";
+			path = ".build/checkouts/SwiftTestUtils-3371106396395558887/Sources/Shared";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Runtime::Runtime::Product" /* Runtime.framework */,
+				"CodableExtensions::CodableExtensions::Product" /* CodableExtensions.framework */,
+				"Codability::Codability::Product" /* Codability.framework */,
+				"RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */,
+				"RandomFactory::RandomFactory::Product" /* RandomFactory.framework */,
+				"PlaceholderImages::PlaceholderImages::Product" /* PlaceholderImages.framework */,
+				"Avatars::Avatars::Product" /* Avatars.framework */,
+				"SwiftTestUtils::SwiftTestUtils::Product" /* SwiftTestUtils.framework */,
+				"Fakery::Fakery::Product" /* Fakery.framework */,
+				"RandomFactory::RandomFactoryTests::Product" /* RandomFactoryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_16 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* CodableExtensions 1.0.0 */,
+				OBJ_25 /* RuntimeExtensions 0.1.0 */,
+				OBJ_31 /* Runtime 0.7.1 */,
+				OBJ_80 /* Codability 0.2.0 */,
+				OBJ_89 /* PlaceholderImages 1.0.0 */,
+				OBJ_99 /* Avatars 1.0.0 */,
+				OBJ_106 /* Fakery 3.3.9 */,
+				OBJ_133 /* SwiftTestUtils 1.0.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* CodableExtensions 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* Package.swift */,
+				OBJ_19 /* AnyCodableExtensions.swift */,
+				OBJ_20 /* Codable+iso8601.swift */,
+				OBJ_21 /* CodableDefaults.swift */,
+				OBJ_22 /* CodableExtensions.swift */,
+				OBJ_23 /* DecoderUpdatable.swift */,
+				OBJ_24 /* ReflectionCodable.swift */,
+			);
+			name = "CodableExtensions 1.0.0";
+			path = ".build/checkouts/CodableExtensions-8282131651046527428/Sources/Shared";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_25 /* RuntimeExtensions 0.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Package.swift */,
+				OBJ_27 /* EmptyInitializable.swift */,
+				OBJ_28 /* EnumUtils.swift */,
+				OBJ_29 /* GlobalRuntimeFunctions.swift */,
+				OBJ_30 /* KVC.swift */,
+			);
+			name = "RuntimeExtensions 0.1.0";
+			path = ".build/checkouts/RuntimeExtensions--5719776098590849474/Sources/Shared";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_31 /* Runtime 0.7.1 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_32 /* Runtime */,
+				OBJ_79 /* Package.swift */,
+			);
+			name = "Runtime 0.7.1";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_32 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* Factory */,
+				OBJ_36 /* Layouts */,
+				OBJ_51 /* Metadata */,
+				OBJ_61 /* Models */,
+				OBJ_68 /* Pointers */,
+				OBJ_73 /* Utilities */,
+			);
+			name = Runtime;
+			path = ".build/checkouts/Runtime--6253572251645273876/Runtime";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_33 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_34 /* DefaultValue.swift */,
+				OBJ_35 /* Factory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		OBJ_36 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_37 /* ClassHeader.swift */,
+				OBJ_38 /* ClassMetadataLayout.swift */,
+				OBJ_39 /* EnumMetadataLayout.swift */,
+				OBJ_40 /* ExistentialContainter.swift */,
+				OBJ_41 /* FunctionMetadataLayout.swift */,
+				OBJ_42 /* MetadataLayoutType.swift */,
+				OBJ_43 /* NominalMetadataLayoutType.swift */,
+				OBJ_44 /* NominalTypeDescriptor.swift */,
+				OBJ_45 /* ProtocolDescriptor.swift */,
+				OBJ_46 /* ProtocolMetadataLayout.swift */,
+				OBJ_47 /* ProtocolTypeContainer.swift */,
+				OBJ_48 /* StructMetadataLayout.swift */,
+				OBJ_49 /* TupleMetadataLayout.swift */,
+				OBJ_50 /* ValueWitnessTable.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				E4403AB020E2C7D0002AF54F /* README.md */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_10 /* Tests */,
+				OBJ_12 /* bin */,
+				OBJ_13 /* Example */,
+				OBJ_14 /* Info */,
+				OBJ_15 /* RandomFactoryTests */,
+				OBJ_16 /* Dependencies */,
+				OBJ_138 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_51 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_52 /* ClassMetadata.swift */,
+				OBJ_53 /* EnumMetadata.swift */,
+				OBJ_54 /* FuntionMetadata.swift */,
+				OBJ_55 /* Metadata.swift */,
+				OBJ_56 /* MetadataType.swift */,
+				OBJ_57 /* NominalMetadataType.swift */,
+				OBJ_58 /* ProtocolMetadata.swift */,
+				OBJ_59 /* StructMetadata.swift */,
+				OBJ_60 /* TupleMetadata.swift */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+		OBJ_61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_62 /* Errors.swift */,
+				OBJ_63 /* FunctionInfo.swift */,
+				OBJ_64 /* Kind.swift */,
+				OBJ_65 /* PropertyInfo.swift */,
+				OBJ_66 /* TypeInfo.swift */,
+				OBJ_67 /* TypeInfoConvertible.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		OBJ_68 /* Pointers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_69 /* Pointers.swift */,
+				OBJ_70 /* RelativePointer.swift */,
+				OBJ_71 /* RelativeVectorPointer.swift */,
+				OBJ_72 /* Vector.swift */,
+			);
+			path = Pointers;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* ContentKeywords.swift */,
+				OBJ_9 /* RandomInitializable.swift */,
+			);
+			name = Sources;
+			path = Sources/Shared;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_73 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_74 /* GettersSetters.swift */,
+				OBJ_75 /* IntegerConvertible.swift */,
+				OBJ_76 /* Pointer+Extensions.swift */,
+				OBJ_77 /* RetainCounts.swift */,
+				OBJ_78 /* String+Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		OBJ_80 /* Codability 0.2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_81 /* Codability */,
+				OBJ_88 /* Package.swift */,
+			);
+			name = "Codability 0.2.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_81 /* Codability */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_82 /* AnyCodable.swift */,
+				OBJ_83 /* GenericDecodingContainer.swift */,
+				OBJ_84 /* InvalidElementStrategy.swift */,
+				OBJ_85 /* KeyedDecodingContainer+Any.swift */,
+				OBJ_86 /* KeyedEncodingContainer+Any.swift */,
+				OBJ_87 /* RawCodingKey.swift */,
+			);
+			name = Codability;
+			path = ".build/checkouts/Codability.git--661166634494793555/Sources/Codability";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_89 /* PlaceholderImages 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_90 /* Package.swift */,
+				OBJ_91 /* ImageURLProvider.swift */,
+				OBJ_92 /* PlaceholderImageGenerator.swift */,
+				OBJ_93 /* Providers */,
+			);
+			name = "PlaceholderImages 1.0.0";
+			path = ".build/checkouts/PlaceholderImages-2840289607096967909/Sources/Shared";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_93 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_94 /* DummyImage.swift */,
+				OBJ_95 /* LoremFlickr.swift */,
+				OBJ_96 /* LoremPixel.swift */,
+				OBJ_97 /* PlaceImg.swift */,
+				OBJ_98 /* Unsplash.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		OBJ_99 /* Avatars 1.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_100 /* Package.swift */,
+				OBJ_101 /* AdorableAvatarImageURLProvider.swift */,
+				OBJ_102 /* AvatarExtensions.swift */,
+				OBJ_103 /* AvatarImageURLBuilder.swift */,
+				OBJ_104 /* GravatarImageURLProvider.swift */,
+				OBJ_105 /* MD5.swift */,
+			);
+			name = "Avatars 1.0.0";
+			path = ".build/checkouts/Avatars--8182117753673074398/Sources/Shared";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Avatars::Avatars" /* Avatars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "Avatars" */;
+			buildPhases = (
+				OBJ_153 /* Sources */,
+				OBJ_159 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Avatars;
+			productName = Avatars;
+			productReference = "Avatars::Avatars::Product" /* Avatars.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Avatars::SwiftPMPackageDescription" /* AvatarsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_161 /* Build configuration list for PBXNativeTarget "AvatarsPackageDescription" */;
+			buildPhases = (
+				OBJ_164 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AvatarsPackageDescription;
+			productName = AvatarsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Codability::Codability" /* Codability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_167 /* Build configuration list for PBXNativeTarget "Codability" */;
+			buildPhases = (
+				OBJ_170 /* Sources */,
+				OBJ_177 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Codability;
+			productName = Codability;
+			productReference = "Codability::Codability::Product" /* Codability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Codability::SwiftPMPackageDescription" /* CodabilityPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_179 /* Build configuration list for PBXNativeTarget "CodabilityPackageDescription" */;
+			buildPhases = (
+				OBJ_182 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodabilityPackageDescription;
+			productName = CodabilityPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"CodableExtensions::CodableExtensions" /* CodableExtensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_185 /* Build configuration list for PBXNativeTarget "CodableExtensions" */;
+			buildPhases = (
+				OBJ_188 /* Sources */,
+				OBJ_195 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_199 /* PBXTargetDependency */,
+				OBJ_200 /* PBXTargetDependency */,
+				OBJ_202 /* PBXTargetDependency */,
+			);
+			name = CodableExtensions;
+			productName = CodableExtensions;
+			productReference = "CodableExtensions::CodableExtensions::Product" /* CodableExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CodableExtensions::SwiftPMPackageDescription" /* CodableExtensionsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_205 /* Build configuration list for PBXNativeTarget "CodableExtensionsPackageDescription" */;
+			buildPhases = (
+				OBJ_208 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodableExtensionsPackageDescription;
+			productName = CodableExtensionsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Fakery::Fakery" /* Fakery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_211 /* Build configuration list for PBXNativeTarget "Fakery" */;
+			buildPhases = (
+				OBJ_214 /* Sources */,
+				OBJ_235 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fakery;
+			productName = Fakery;
+			productReference = "Fakery::Fakery::Product" /* Fakery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Fakery::SwiftPMPackageDescription" /* FakeryPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_237 /* Build configuration list for PBXNativeTarget "FakeryPackageDescription" */;
+			buildPhases = (
+				OBJ_240 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FakeryPackageDescription;
+			productName = FakeryPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"PlaceholderImages::PlaceholderImages" /* PlaceholderImages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_243 /* Build configuration list for PBXNativeTarget "PlaceholderImages" */;
+			buildPhases = (
+				OBJ_246 /* Sources */,
+				OBJ_254 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaceholderImages;
+			productName = PlaceholderImages;
+			productReference = "PlaceholderImages::PlaceholderImages::Product" /* PlaceholderImages.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"PlaceholderImages::SwiftPMPackageDescription" /* PlaceholderImagesPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_256 /* Build configuration list for PBXNativeTarget "PlaceholderImagesPackageDescription" */;
+			buildPhases = (
+				OBJ_259 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaceholderImagesPackageDescription;
+			productName = PlaceholderImagesPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"RandomFactory::RandomFactory" /* RandomFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_262 /* Build configuration list for PBXNativeTarget "RandomFactory" */;
+			buildPhases = (
+				OBJ_265 /* Sources */,
+				OBJ_268 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_276 /* PBXTargetDependency */,
+				OBJ_277 /* PBXTargetDependency */,
+				OBJ_278 /* PBXTargetDependency */,
+				OBJ_279 /* PBXTargetDependency */,
+				OBJ_280 /* PBXTargetDependency */,
+				OBJ_281 /* PBXTargetDependency */,
+				OBJ_282 /* PBXTargetDependency */,
+			);
+			name = RandomFactory;
+			productName = RandomFactory;
+			productReference = "RandomFactory::RandomFactory::Product" /* RandomFactory.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"RandomFactory::RandomFactoryTests" /* RandomFactoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_295 /* Build configuration list for PBXNativeTarget "RandomFactoryTests" */;
+			buildPhases = (
+				OBJ_298 /* Sources */,
+				OBJ_300 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_310 /* PBXTargetDependency */,
+				OBJ_312 /* PBXTargetDependency */,
+				OBJ_313 /* PBXTargetDependency */,
+				OBJ_314 /* PBXTargetDependency */,
+				OBJ_315 /* PBXTargetDependency */,
+				OBJ_316 /* PBXTargetDependency */,
+				OBJ_317 /* PBXTargetDependency */,
+				OBJ_318 /* PBXTargetDependency */,
+				OBJ_319 /* PBXTargetDependency */,
+			);
+			name = RandomFactoryTests;
+			productName = RandomFactoryTests;
+			productReference = "RandomFactory::RandomFactoryTests::Product" /* RandomFactoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"RandomFactory::SwiftPMPackageDescription" /* RandomFactoryPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_284 /* Build configuration list for PBXNativeTarget "RandomFactoryPackageDescription" */;
+			buildPhases = (
+				OBJ_287 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RandomFactoryPackageDescription;
+			productName = RandomFactoryPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Runtime::Runtime" /* Runtime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_320 /* Build configuration list for PBXNativeTarget "Runtime" */;
+			buildPhases = (
+				OBJ_323 /* Sources */,
+				OBJ_364 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Runtime;
+			productName = Runtime;
+			productReference = "Runtime::Runtime::Product" /* Runtime.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Runtime::SwiftPMPackageDescription" /* RuntimePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_383 /* Build configuration list for PBXNativeTarget "RuntimePackageDescription" */;
+			buildPhases = (
+				OBJ_386 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimePackageDescription;
+			productName = RuntimePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"RuntimeExtensions::RuntimeExtensions" /* RuntimeExtensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_365 /* Build configuration list for PBXNativeTarget "RuntimeExtensions" */;
+			buildPhases = (
+				OBJ_368 /* Sources */,
+				OBJ_373 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_375 /* PBXTargetDependency */,
+			);
+			name = RuntimeExtensions;
+			productName = RuntimeExtensions;
+			productReference = "RuntimeExtensions::RuntimeExtensions::Product" /* RuntimeExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"RuntimeExtensions::SwiftPMPackageDescription" /* RuntimeExtensionsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_377 /* Build configuration list for PBXNativeTarget "RuntimeExtensionsPackageDescription" */;
+			buildPhases = (
+				OBJ_380 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RuntimeExtensionsPackageDescription;
+			productName = RuntimeExtensionsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftTestUtils::SwiftPMPackageDescription" /* SwiftTestUtilsPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_397 /* Build configuration list for PBXNativeTarget "SwiftTestUtilsPackageDescription" */;
+			buildPhases = (
+				OBJ_400 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTestUtilsPackageDescription;
+			productName = SwiftTestUtilsPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftTestUtils::SwiftTestUtils" /* SwiftTestUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_388 /* Build configuration list for PBXNativeTarget "SwiftTestUtils" */;
+			buildPhases = (
+				OBJ_391 /* Sources */,
+				OBJ_395 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTestUtils;
+			productName = SwiftTestUtils;
+			productReference = "SwiftTestUtils::SwiftTestUtils::Product" /* SwiftTestUtils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "RandomFactory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Avatars::Avatars" /* Avatars */,
+				"Avatars::SwiftPMPackageDescription" /* AvatarsPackageDescription */,
+				"Codability::Codability" /* Codability */,
+				"Codability::SwiftPMPackageDescription" /* CodabilityPackageDescription */,
+				"CodableExtensions::CodableExtensions" /* CodableExtensions */,
+				"CodableExtensions::SwiftPMPackageDescription" /* CodableExtensionsPackageDescription */,
+				"Fakery::Fakery" /* Fakery */,
+				"Fakery::SwiftPMPackageDescription" /* FakeryPackageDescription */,
+				"PlaceholderImages::PlaceholderImages" /* PlaceholderImages */,
+				"PlaceholderImages::SwiftPMPackageDescription" /* PlaceholderImagesPackageDescription */,
+				"RandomFactory::RandomFactory" /* RandomFactory */,
+				"RandomFactory::SwiftPMPackageDescription" /* RandomFactoryPackageDescription */,
+				"RandomFactory::RandomFactoryPackageTests::ProductTarget" /* RandomFactoryPackageTests */,
+				"RandomFactory::RandomFactoryTests" /* RandomFactoryTests */,
+				"Runtime::Runtime" /* Runtime */,
+				"RuntimeExtensions::RuntimeExtensions" /* RuntimeExtensions */,
+				"RuntimeExtensions::SwiftPMPackageDescription" /* RuntimeExtensionsPackageDescription */,
+				"Runtime::SwiftPMPackageDescription" /* RuntimePackageDescription */,
+				"SwiftTestUtils::SwiftTestUtils" /* SwiftTestUtils */,
+				"SwiftTestUtils::SwiftPMPackageDescription" /* SwiftTestUtilsPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_154 /* AdorableAvatarImageURLProvider.swift in Sources */,
+				OBJ_155 /* AvatarExtensions.swift in Sources */,
+				OBJ_156 /* AvatarImageURLBuilder.swift in Sources */,
+				OBJ_157 /* GravatarImageURLProvider.swift in Sources */,
+				OBJ_158 /* MD5.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_165 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_171 /* AnyCodable.swift in Sources */,
+				OBJ_172 /* GenericDecodingContainer.swift in Sources */,
+				OBJ_173 /* InvalidElementStrategy.swift in Sources */,
+				OBJ_174 /* KeyedDecodingContainer+Any.swift in Sources */,
+				OBJ_175 /* KeyedEncodingContainer+Any.swift in Sources */,
+				OBJ_176 /* RawCodingKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_183 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_188 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_189 /* AnyCodableExtensions.swift in Sources */,
+				OBJ_190 /* Codable+iso8601.swift in Sources */,
+				OBJ_191 /* CodableDefaults.swift in Sources */,
+				OBJ_192 /* CodableExtensions.swift in Sources */,
+				OBJ_193 /* DecoderUpdatable.swift in Sources */,
+				OBJ_194 /* ReflectionCodable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_209 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_215 /* Config.swift in Sources */,
+				OBJ_216 /* Parser.swift in Sources */,
+				OBJ_217 /* Provider.swift in Sources */,
+				OBJ_218 /* ArrayExtension.swift in Sources */,
+				OBJ_219 /* Faker.swift in Sources */,
+				OBJ_220 /* Address.swift in Sources */,
+				OBJ_221 /* App.swift in Sources */,
+				OBJ_222 /* Bank.swift in Sources */,
+				OBJ_223 /* Business.swift in Sources */,
+				OBJ_224 /* Commerce.swift in Sources */,
+				OBJ_225 /* Company.swift in Sources */,
+				OBJ_226 /* Generator.swift in Sources */,
+				OBJ_227 /* Internet.swift in Sources */,
+				OBJ_228 /* Lorem.swift in Sources */,
+				OBJ_229 /* Name.swift in Sources */,
+				OBJ_230 /* Number.swift in Sources */,
+				OBJ_231 /* PhoneNumber.swift in Sources */,
+				OBJ_232 /* Team.swift in Sources */,
+				OBJ_233 /* LinuxRandom.swift in Sources */,
+				OBJ_234 /* en.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_241 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_246 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_247 /* ImageURLProvider.swift in Sources */,
+				OBJ_248 /* PlaceholderImageGenerator.swift in Sources */,
+				OBJ_249 /* DummyImage.swift in Sources */,
+				OBJ_250 /* LoremFlickr.swift in Sources */,
+				OBJ_251 /* LoremPixel.swift in Sources */,
+				OBJ_252 /* PlaceImg.swift in Sources */,
+				OBJ_253 /* Unsplash.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_260 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_266 /* ContentKeywords.swift in Sources */,
+				OBJ_267 /* RandomInitializable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_288 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_298 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_299 /* SharedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_323 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_324 /* DefaultValue.swift in Sources */,
+				OBJ_325 /* Factory.swift in Sources */,
+				OBJ_326 /* ClassHeader.swift in Sources */,
+				OBJ_327 /* ClassMetadataLayout.swift in Sources */,
+				OBJ_328 /* EnumMetadataLayout.swift in Sources */,
+				OBJ_329 /* ExistentialContainter.swift in Sources */,
+				OBJ_330 /* FunctionMetadataLayout.swift in Sources */,
+				OBJ_331 /* MetadataLayoutType.swift in Sources */,
+				OBJ_332 /* NominalMetadataLayoutType.swift in Sources */,
+				OBJ_333 /* NominalTypeDescriptor.swift in Sources */,
+				OBJ_334 /* ProtocolDescriptor.swift in Sources */,
+				OBJ_335 /* ProtocolMetadataLayout.swift in Sources */,
+				OBJ_336 /* ProtocolTypeContainer.swift in Sources */,
+				OBJ_337 /* StructMetadataLayout.swift in Sources */,
+				OBJ_338 /* TupleMetadataLayout.swift in Sources */,
+				OBJ_339 /* ValueWitnessTable.swift in Sources */,
+				OBJ_340 /* ClassMetadata.swift in Sources */,
+				OBJ_341 /* EnumMetadata.swift in Sources */,
+				OBJ_342 /* FuntionMetadata.swift in Sources */,
+				OBJ_343 /* Metadata.swift in Sources */,
+				OBJ_344 /* MetadataType.swift in Sources */,
+				OBJ_345 /* NominalMetadataType.swift in Sources */,
+				OBJ_346 /* ProtocolMetadata.swift in Sources */,
+				OBJ_347 /* StructMetadata.swift in Sources */,
+				OBJ_348 /* TupleMetadata.swift in Sources */,
+				OBJ_349 /* Errors.swift in Sources */,
+				OBJ_350 /* FunctionInfo.swift in Sources */,
+				OBJ_351 /* Kind.swift in Sources */,
+				OBJ_352 /* PropertyInfo.swift in Sources */,
+				OBJ_353 /* TypeInfo.swift in Sources */,
+				OBJ_354 /* TypeInfoConvertible.swift in Sources */,
+				OBJ_355 /* Pointers.swift in Sources */,
+				OBJ_356 /* RelativePointer.swift in Sources */,
+				OBJ_357 /* RelativeVectorPointer.swift in Sources */,
+				OBJ_358 /* Vector.swift in Sources */,
+				OBJ_359 /* GettersSetters.swift in Sources */,
+				OBJ_360 /* IntegerConvertible.swift in Sources */,
+				OBJ_361 /* Pointer+Extensions.swift in Sources */,
+				OBJ_362 /* RetainCounts.swift in Sources */,
+				OBJ_363 /* String+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_368 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_369 /* EmptyInitializable.swift in Sources */,
+				OBJ_370 /* EnumUtils.swift in Sources */,
+				OBJ_371 /* GlobalRuntimeFunctions.swift in Sources */,
+				OBJ_372 /* KVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_380 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_381 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_386 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_387 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_391 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_392 /* BaseTestCase.swift in Sources */,
+				OBJ_393 /* LinuxTestable.swift in Sources */,
+				OBJ_394 /* XCAssertions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_401 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codability::Codability" /* Codability */;
+			targetProxy = E4403A9B20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_200 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RuntimeExtensions::RuntimeExtensions" /* RuntimeExtensions */;
+			targetProxy = E4403A9C20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Runtime::Runtime" /* Runtime */;
+			targetProxy = E4403A9E20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_276 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodableExtensions::CodableExtensions" /* CodableExtensions */;
+			targetProxy = E4403A9F20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_277 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codability::Codability" /* Codability */;
+			targetProxy = E4403AA020E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_278 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RuntimeExtensions::RuntimeExtensions" /* RuntimeExtensions */;
+			targetProxy = E4403AA120E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_279 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Runtime::Runtime" /* Runtime */;
+			targetProxy = E4403AA220E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_280 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PlaceholderImages::PlaceholderImages" /* PlaceholderImages */;
+			targetProxy = E4403AA320E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_281 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Avatars::Avatars" /* Avatars */;
+			targetProxy = E4403AA420E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_282 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Fakery::Fakery" /* Fakery */;
+			targetProxy = E4403AA520E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_293 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RandomFactory::RandomFactoryTests" /* RandomFactoryTests */;
+			targetProxy = E4403AAF20E2C7BE002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_310 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftTestUtils::SwiftTestUtils" /* SwiftTestUtils */;
+			targetProxy = E4403AA620E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_312 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RandomFactory::RandomFactory" /* RandomFactory */;
+			targetProxy = E4403AA720E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodableExtensions::CodableExtensions" /* CodableExtensions */;
+			targetProxy = E4403AA820E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_314 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Codability::Codability" /* Codability */;
+			targetProxy = E4403AA920E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "RuntimeExtensions::RuntimeExtensions" /* RuntimeExtensions */;
+			targetProxy = E4403AAA20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Runtime::Runtime" /* Runtime */;
+			targetProxy = E4403AAB20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_317 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "PlaceholderImages::PlaceholderImages" /* PlaceholderImages */;
+			targetProxy = E4403AAC20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_318 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Avatars::Avatars" /* Avatars */;
+			targetProxy = E4403AAD20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Fakery::Fakery" /* Fakery */;
+			targetProxy = E4403AAE20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+		OBJ_375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Runtime::Runtime" /* Runtime */;
+			targetProxy = E4403A9D20E2C7BD002AF54F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Avatars_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Avatars;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Avatars;
+			};
+			name = Debug;
+		};
+		OBJ_152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Avatars_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Avatars;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Avatars;
+			};
+			name = Release;
+		};
+		OBJ_162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Codability_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Codability;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Codability;
+			};
+			name = Debug;
+		};
+		OBJ_169 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Codability_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Codability;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Codability;
+			};
+			name = Release;
+		};
+		OBJ_180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_186 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/CodableExtensions_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodableExtensions;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodableExtensions;
+			};
+			name = Debug;
+		};
+		OBJ_187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/CodableExtensions_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodableExtensions;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodableExtensions;
+			};
+			name = Release;
+		};
+		OBJ_206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Fakery_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Fakery;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Fakery;
+			};
+			name = Debug;
+		};
+		OBJ_213 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Fakery_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Fakery;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Fakery;
+			};
+			name = Release;
+		};
+		OBJ_238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/PlaceholderImages_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PlaceholderImages;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = PlaceholderImages;
+			};
+			name = Debug;
+		};
+		OBJ_245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/PlaceholderImages_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = PlaceholderImages;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = PlaceholderImages;
+			};
+			name = Release;
+		};
+		OBJ_257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RandomFactory_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RandomFactory;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RandomFactory;
+			};
+			name = Debug;
+		};
+		OBJ_264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RandomFactory_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RandomFactory;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RandomFactory;
+			};
+			name = Release;
+		};
+		OBJ_285 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RandomFactoryTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RandomFactoryTests;
+			};
+			name = Debug;
+		};
+		OBJ_297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RandomFactoryTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RandomFactoryTests;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Runtime_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Runtime;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Runtime;
+			};
+			name = Debug;
+		};
+		OBJ_322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/Runtime_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Runtime;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Runtime;
+			};
+			name = Release;
+		};
+		OBJ_366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RuntimeExtensions_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RuntimeExtensions;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RuntimeExtensions;
+			};
+			name = Debug;
+		};
+		OBJ_367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/RuntimeExtensions_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = RuntimeExtensions;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = RuntimeExtensions;
+			};
+			name = Release;
+		};
+		OBJ_378 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/SwiftTestUtils_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftTestUtils;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftTestUtils;
+			};
+			name = Debug;
+		};
+		OBJ_390 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = RandomFactory.xcodeproj/SwiftTestUtils_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftTestUtils;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftTestUtils;
+			};
+			name = Release;
+		};
+		OBJ_398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_150 /* Build configuration list for PBXNativeTarget "Avatars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_151 /* Debug */,
+				OBJ_152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_161 /* Build configuration list for PBXNativeTarget "AvatarsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_162 /* Debug */,
+				OBJ_163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_167 /* Build configuration list for PBXNativeTarget "Codability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_168 /* Debug */,
+				OBJ_169 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_179 /* Build configuration list for PBXNativeTarget "CodabilityPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_180 /* Debug */,
+				OBJ_181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_185 /* Build configuration list for PBXNativeTarget "CodableExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_186 /* Debug */,
+				OBJ_187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "RandomFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_205 /* Build configuration list for PBXNativeTarget "CodableExtensionsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_206 /* Debug */,
+				OBJ_207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_211 /* Build configuration list for PBXNativeTarget "Fakery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_212 /* Debug */,
+				OBJ_213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_237 /* Build configuration list for PBXNativeTarget "FakeryPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_238 /* Debug */,
+				OBJ_239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_243 /* Build configuration list for PBXNativeTarget "PlaceholderImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_244 /* Debug */,
+				OBJ_245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_256 /* Build configuration list for PBXNativeTarget "PlaceholderImagesPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_257 /* Debug */,
+				OBJ_258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_262 /* Build configuration list for PBXNativeTarget "RandomFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_263 /* Debug */,
+				OBJ_264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_284 /* Build configuration list for PBXNativeTarget "RandomFactoryPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_285 /* Debug */,
+				OBJ_286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_290 /* Build configuration list for PBXAggregateTarget "RandomFactoryPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_291 /* Debug */,
+				OBJ_292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_295 /* Build configuration list for PBXNativeTarget "RandomFactoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_296 /* Debug */,
+				OBJ_297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_320 /* Build configuration list for PBXNativeTarget "Runtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_321 /* Debug */,
+				OBJ_322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_365 /* Build configuration list for PBXNativeTarget "RuntimeExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_366 /* Debug */,
+				OBJ_367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_377 /* Build configuration list for PBXNativeTarget "RuntimeExtensionsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_378 /* Debug */,
+				OBJ_379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_383 /* Build configuration list for PBXNativeTarget "RuntimePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_384 /* Debug */,
+				OBJ_385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_388 /* Build configuration list for PBXNativeTarget "SwiftTestUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_389 /* Debug */,
+				OBJ_390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_397 /* Build configuration list for PBXNativeTarget "SwiftTestUtilsPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_398 /* Debug */,
+				OBJ_399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

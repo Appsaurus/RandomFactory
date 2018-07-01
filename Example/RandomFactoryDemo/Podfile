@@ -1,0 +1,15 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'RandomFactoryDemo' do
+ pod 'RandomFactory', path: '../../'
+ pod 'Fakery', :git => 'https://github.com/Appsaurus/Fakery'
+ pod 'PlaceholderImages', :git => 'https://github.com/Appsaurus/PlaceholderImages'
+ pod 'Avatars', :git => 'https://github.com/Appsaurus/Avatars'
+ pod 'CodableExtensions', :git => 'https://github.com/Appsaurus/CodableExtensions'
+ pod 'RuntimeExtensions', :git => 'https://github.com/Appsaurus/RuntimeExtensions'
+pod 'Codability', :git => 'https://github.com/Appsaurus/Codability'
+
+end
+
