@@ -7,7 +7,7 @@ RandomFactory allows you to generate somewhat realistic fake data for any Codabl
 
 ## Installation
 
-**RandomFactory** is available through [Swift Package Manager](https://swift.org/package-manager/). To install, simply add the following line to the dependencies in your Package.swift file.
+**RandomFactory** is available through [Swift Package Manager](https://swift.org/package-manager/). To install, add the following to your Package.swift file.
 
 ```swift
 let package = Package(
@@ -17,7 +17,9 @@ let package = Package(
         .package(url: "https://github.com/Appsaurus/RandomFactory", from: "1.0.0"),
     ],
     targets: [
-      .testTarget(name: "YourApp", dependencies: ["RandomFactory", ... ])
+      .target(name: "YourApp", dependencies: ["RandomFactory", ... ])
+      //or if just using for test purposes
+      .testTarget(name: "YourAppTests", dependencies: ["RandomFactory", ... ])
     ]
 )
         
@@ -109,7 +111,7 @@ let count = 5
 let users: [User] = try RandomFactory.shared.randomizedArray(of: count)
 ```
 
-## Warning
+## ⚠️ WARNING
 
 This library usings runtime reflection to analyze your model and generate appropriate data. This library is probably best used for testing purposes (like seeding a bunch of test data into a database), due to swift ABI instability. I will do my best to keep this updated with new versions of Swift, but depending upon what the swift team does, this library could break in future versions of Swift. Hopefully, once ABI stability is achieved, there will be a better, more reliable way to do reflection and this will be production ready.
 
