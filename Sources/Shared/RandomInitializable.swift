@@ -156,7 +156,7 @@ public class RandomEncodableGenerator{
 			return optionalHasValue ? randomDouble(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
 		case is Optional<Int>.Type:
 			return optionalHasValue ? randomInt(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
-		case is Optional<Date>.Type:
+		case is Optional<Foundation.Date>.Type:
 			return optionalHasValue ? randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
 		case is Optional<URL>.Type:
 			return optionalHasValue ? randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
@@ -170,7 +170,7 @@ public class RandomEncodableGenerator{
 			return randomDouble(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
 		case is Int.Type:
 			return randomInt(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
-		case is Date.Type:
+		case is Foundation.Date.Type:
 			return randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
 		case is URL.Type:
 			return randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
@@ -322,12 +322,9 @@ public class RandomEncodableGenerator{
 		}
 	}
 
-	public func randomDate(forContentType contentType: ContentType? = nil, named propertyName: String? = nil, withOwnerOfType ownerType: Any.Type? = nil) -> Date{
-		//		guard let contentType = contentType else{
-
-		let randomTime = TimeInterval(Random.int())
+	public func randomDate(forContentType contentType: ContentType? = nil, named propertyName: String? = nil, withOwnerOfType ownerType: Any.Type? = nil) -> Foundation.Date{
+        let randomTime = TimeInterval(Int.random(in: 0...999999))
 		return Date(timeIntervalSince1970: randomTime)
-		//		}
 	}
 
 	public func randomURL(forContentType contentType: ContentType? = nil, named propertyName: String? = nil, withOwnerOfType ownerType: Any.Type? = nil) -> URL{

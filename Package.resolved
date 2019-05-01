@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Appsaurus/Avatars",
         "state": {
           "branch": null,
-          "revision": "3100701cb84755c61bb356cde4026fdaeba31bc5",
-          "version": "1.0.0"
+          "revision": "f9d00e4cc330dfc86c0bf92092249ab84ef82287",
+          "version": "1.0.1"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/yonaskolb/Codability.git",
         "state": {
           "branch": null,
-          "revision": "1b6006c243e30b9941bf0e994697d3e524ca2eb9",
-          "version": "0.2.0"
+          "revision": "eb5bac78e0679f521c3f058c1eb9be0dd657dadd",
+          "version": "0.2.1"
         }
       },
       {
@@ -29,12 +29,21 @@
         }
       },
       {
+        "package": "CRuntime",
+        "repositoryURL": "https://github.com/wickwirew/CRuntime.git",
+        "state": {
+          "branch": null,
+          "revision": "95f911318d8c885f6fc05e971471f94adfd39405",
+          "version": "2.1.2"
+        }
+      },
+      {
         "package": "Fakery",
         "repositoryURL": "https://github.com/Appsaurus/Fakery",
         "state": {
           "branch": null,
-          "revision": "3a2762b46bb1f8f1f9331a2d58a6e1bb4e391fc1",
-          "version": "3.3.9"
+          "revision": "d2f4dd5e362718a218df26bfcb2a875ba1633b21",
+          "version": "3.4.2"
         }
       },
       {
@@ -42,8 +51,8 @@
         "repositoryURL": "https://github.com/Appsaurus/PlaceholderImages",
         "state": {
           "branch": null,
-          "revision": "0b5f510ea7436a6f094c47a448b98de421185775",
-          "version": "1.0.0"
+          "revision": "f04b9a60eff34432c4edaa082dad8de316d1a60b",
+          "version": "1.0.1"
         }
       },
       {
@@ -51,8 +60,8 @@
         "repositoryURL": "https://github.com/wickwirew/Runtime",
         "state": {
           "branch": null,
-          "revision": "23357609f0df427d870bb4bd22ac14e0a4ea1346",
-          "version": "0.7.1"
+          "revision": "c167476b07fe8cc65fdf064076a4081c3269d14a",
+          "version": "2.1.0"
         }
       },
       {
@@ -60,8 +69,8 @@
         "repositoryURL": "https://github.com/Appsaurus/RuntimeExtensions",
         "state": {
           "branch": null,
-          "revision": "35d5388ac39c08459400b1314bed6da11facb85b",
-          "version": "0.1.0"
+          "revision": "6a5645ca767d25b9fc1cf4897efdce1cb90b6b9a",
+          "version": "0.1.4"
         }
       },
       {
@@ -69,8 +78,8 @@
         "repositoryURL": "https://github.com/Appsaurus/SwiftTestUtils",
         "state": {
           "branch": null,
-          "revision": "049813ba5a975dd0193e4613fe0f801844a25663",
-          "version": "1.0.0"
+          "revision": "76b498f338b4249898656947fa2713747fa429f7",
+          "version": "1.0.1"
         }
       }
     ]
