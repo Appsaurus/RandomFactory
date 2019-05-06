@@ -29,6 +29,7 @@ class SharedTests: BaseTestCase {
 	}
 }
 
+
 open class User: Codable{
 	public var name: Name
 	public var username: String
@@ -54,8 +55,16 @@ public struct Location: Codable{
 	var countryCode: String
 
 }
-public class Name: Codable{
-	public var namePrefix: String
+
+public enum NamePrefix: String, Codable {
+    case mr
+    case mrs
+    case miss
+    case other
+}
+
+public class Name: Codable {
+	public var namePrefix: NamePrefix = .other
 	public var givenName: String
 	public var middleName: String
 	public var familyName: String
