@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/Appsaurus/CodableExtensions",
         "state": {
           "branch": null,
-          "revision": "4b8e1fafe94ac99fa53118d63a1ce8b7f075fa67",
-          "version": "1.0.0"
+          "revision": "56572ae1e63b13ec23d9af20348b87e1f33e4b58",
+          "version": "1.0.6"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/Appsaurus/Fakery",
         "state": {
           "branch": null,
-          "revision": "d2f4dd5e362718a218df26bfcb2a875ba1633b21",
-          "version": "3.4.2"
+          "revision": "8d0eafcda7dfd3152a2d86c6c458534428ed3987",
+          "version": "3.4.4"
         }
       },
       {

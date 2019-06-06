@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
 	name: "RandomFactory",
+    platforms: [
+        .macOS(.v10_12)
+    ],
 	products: [
 		.library(name: "RandomFactory", targets: ["RandomFactory"])
 	],
