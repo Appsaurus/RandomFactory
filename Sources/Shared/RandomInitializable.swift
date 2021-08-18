@@ -27,7 +27,7 @@ extension RandomFactory{
 }
 public class RandomFactory{
 
-	private var generator: RandomEncodableGenerator
+	public var generator: RandomEncodableGenerator
 	public static let shared: RandomFactory = RandomFactory()
 
 	public init(maxKeywordDistance: Int? = nil){
