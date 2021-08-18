@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "RandomFactory"
   s.summary          = "A short description of RandomFactory."
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.homepage         = "github.com/Strobocop/RandomFactory"
   s.license          = 'MIT'
   s.author           = { "Brian Strobach" => "brian@appsaurus.io" }
@@ -10,10 +10,10 @@ Pod::Spec.new do |s|
     :tag => s.version.to_s
   }
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.9'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
   s.tvos.deployment_target = '9.2'
-  s.watchos.deployment_target = '3.0'
+  s.watchos.deployment_target = "3.0"
 
   s.requires_arc = true
   s.ios.source_files = 'Sources/{iOS,Shared}/**/*'
@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
   s.dependency 'PlaceholderImages'
   s.dependency 'CodableExtensions'
 
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.4' }
 end

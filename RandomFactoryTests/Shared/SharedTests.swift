@@ -2,32 +2,37 @@ import XCTest
 import RandomFactory
 import CodableExtensions
 import RuntimeExtensions
-import SwiftTestUtils
 
 #if !os(Linux)
 import CoreLocation
 #endif
 
-class SharedTests: BaseTestCase {
-	//MARK: Linux Testing
-	static var allTests = [
-		("testLinuxTestSuiteIncludesAllTests", testLinuxTestSuiteIncludesAllTests),
-		("testRandomFactory", testRandomFactory)
-	]
-
-	func testLinuxTestSuiteIncludesAllTests(){
-		assertLinuxTestCoverage(tests: type(of: self).allTests)
-	}
+class SharedTests: XCTestCase {
 
 	func testRandomFactory() throws {
 		let count = 5
 		let users: [User] = try RandomFactory.shared.randomizedArray(of: count)
 		XCTAssertEqual(users.count, count)
-//		for user in users{
-//			try user.toAnyDictionary().printPrettyJSONString()
-//		}
+		for user in users{
+			try user.toAnyDictionary().printPrettyJSONString()
+		}
 	}
+
+    func testNestedArray() throws {
+        let count = 1
+        let users: [Userbase] = try RandomFactory.shared.randomizedArray(of: count)
+        XCTAssertEqual(users.count, count)
+        for user in users{
+            try user.toAnyDictionary().printPrettyJSONString()
+        }
+    }
 }
+
+open class Userbase: Codable{
+    public var users: [User]
+    public var name: String
+}
+
 
 open class User: Codable{
 	public var name: Name

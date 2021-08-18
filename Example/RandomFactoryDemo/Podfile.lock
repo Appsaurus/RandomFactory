@@ -1,31 +1,31 @@
 PODS:
   - Avatars (0.1.1)
   - Codability (0.2.1)
-  - CodableExtensions (0.1.0):
+  - CodableExtensions (1.0.8):
     - Codability
     - RuntimeExtensions
-  - Fakery (3.3.8)
+  - Fakery (5.1.0)
   - PlaceholderImages (1.0.0)
-  - RandomFactory (0.1.5):
+  - RandomFactory (0.1.1):
     - Avatars
     - CodableExtensions
     - Fakery
     - PlaceholderImages
-  - Runtime (0.7.1)
-  - RuntimeExtensions (0.1.0):
+  - Runtime (2.2.2)
+  - RuntimeExtensions (0.1.6):
     - Runtime
 
 DEPENDENCIES:
   - Avatars (from `https://github.com/Appsaurus/Avatars`)
   - Codability (from `https://github.com/Appsaurus/Codability`)
   - CodableExtensions (from `https://github.com/Appsaurus/CodableExtensions`)
-  - Fakery (from `https://github.com/Appsaurus/Fakery`)
   - PlaceholderImages (from `https://github.com/Appsaurus/PlaceholderImages`)
   - RandomFactory (from `../../`)
   - RuntimeExtensions (from `https://github.com/Appsaurus/RuntimeExtensions`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
+    - Fakery
     - Runtime
 
 EXTERNAL SOURCES:
@@ -35,8 +35,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/Appsaurus/Codability
   CodableExtensions:
     :git: https://github.com/Appsaurus/CodableExtensions
-  Fakery:
-    :git: https://github.com/Appsaurus/Fakery
   PlaceholderImages:
     :git: https://github.com/Appsaurus/PlaceholderImages
   RandomFactory:
@@ -46,34 +44,31 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Avatars:
-    :commit: 3100701cb84755c61bb356cde4026fdaeba31bc5
+    :commit: f9d00e4cc330dfc86c0bf92092249ab84ef82287
     :git: https://github.com/Appsaurus/Avatars
   Codability:
     :commit: 55afc374ab844cc0363d44cc2c543ffb9cf05a3f
     :git: https://github.com/Appsaurus/Codability
   CodableExtensions:
-    :commit: dfcdeb516328e2d68c30bef2e93b14d88984aa1d
+    :commit: 281dba14bbb7a4dfba3a2b1c72f7b9407e15ddab
     :git: https://github.com/Appsaurus/CodableExtensions
-  Fakery:
-    :commit: 76c0ba80a550725b785d354b7db89104f7251e17
-    :git: https://github.com/Appsaurus/Fakery
   PlaceholderImages:
-    :commit: 0b5f510ea7436a6f094c47a448b98de421185775
+    :commit: f04b9a60eff34432c4edaa082dad8de316d1a60b
     :git: https://github.com/Appsaurus/PlaceholderImages
   RuntimeExtensions:
-    :commit: 515ea89f5fc1345dbb681a823f91dcb6435e0493
+    :commit: f47b6e7e21e0fb5dc5785b77a1cac9a35dbe28e3
     :git: https://github.com/Appsaurus/RuntimeExtensions
 
 SPEC CHECKSUMS:
   Avatars: f5053a48fa9cfaf33826fe4b6616ae6a9706d776
-  Codability: c888a339f4784c15a482b2180799e1836fc119aa
-  CodableExtensions: 94e4883dbe40fb1c4e0c4e2bf1e62f7aa1eebdab
-  Fakery: de3356519c12b5a83e4b751f61257b61e3eb0628
+  Codability: 4bd943d208a0699c15d63575a189c420d5773aaa
+  CodableExtensions: 9098b4933a7e7493702abb84385bf78c911352b8
+  Fakery: a90caff00ca5cacde6c161c3eafc72314a03d34d
   PlaceholderImages: ac5d291acf80939bdac2b8f4dce8eea031a77625
-  RandomFactory: fc9df404b4e26045e4caf3f6cbcc5ffa811d36d6
-  Runtime: 6b152eab4773d494041afe5480a84c91d86961b9
-  RuntimeExtensions: 81580d0ecf987e49c8889758d968519c9e23e8f1
+  RandomFactory: 40757053be1882e473c1f8de403d1b693fcafca9
+  Runtime: 67741bd196fb4ad821c4d259ccc527bf734d8806
+  RuntimeExtensions: ec79699194368fb65244ccb3c2ec294903ecf1ca
 
-PODFILE CHECKSUM: 07514e07d301d17bc95445307aa73471113dea27
+PODFILE CHECKSUM: 6db31848b52393fe576e3edb187d367ff7c50a6d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.10.1

@@ -9,7 +9,7 @@ import Foundation
 import RuntimeExtensions
 
 //Workaround to enforce RawValue type in where clause since Non-protocol, non-class type 'String' cannot be used within a protocol-constrained type
-private protocol RawString{}
+public protocol RawString{}
 extension String: RawString {}
 
 public protocol ContentKeywordsEnum: RawRepresentable, CaseIterable where Self.RawValue: Hashable & RawString{

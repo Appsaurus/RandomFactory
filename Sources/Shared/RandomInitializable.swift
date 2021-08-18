@@ -67,7 +67,7 @@ public class RandomEncodableGenerator{
 	public init(maxKeywordDistance: Int? = nil){
 		self.maxKeywordDistance = maxKeywordDistance
 	}
-	public func randomDictionary(decodableTo type: Any.Type, overrides: RandomValueGenerator? = nil) throws -> AnyDictionary{
+    public func randomDictionary(decodableTo type: Any.Type, collectionSize: Int = 5, overrides: RandomValueGenerator? = nil) throws -> AnyDictionary{
 		var dict: AnyDictionary = [:]
 
 		for property in try properties(type){
@@ -90,7 +90,7 @@ public class RandomEncodableGenerator{
 		return dict
 	}
 
-	public func randomValue(for property: PropertyInfo, maxDistance: Int? = nil) throws -> Any?{
+	public func randomValue(for property: PropertyInfo, collectionSize: Int = 5, maxDistance: Int? = nil) throws -> Any?{
 		do{
 			if let genericInfo = try typeInfo(of: property.type).genericTypeInfo{
 				return try randomValue(ofGenericType: genericInfo, forProperty: property, maxDistance: maxDistance)
@@ -137,14 +137,18 @@ public class RandomEncodableGenerator{
 
 	}
 
-	public func randomValue(ofType type: Any.Type, for property: PropertyInfo, maxDistance: Int? = nil) throws -> Any?{
+	public func randomValue(ofType type: Any.Type, for property: PropertyInfo, collectionSize: Int = 5, maxDistance: Int? = nil) throws -> Any?{
 		let contentType: ContentType = try self.contentType(forProperty: property, maxDistance: maxDistance)
 		return try randomValue(ofType: type, forPropertyNamed: property.name, withOwnerOfType: property.ownerType, contentType: contentType)
 
 	}
 
 
-	public func randomValue(ofType type: Any.Type, forPropertyNamed propertyName: String? = nil, withOwnerOfType ownerType: Any.Type? = nil, contentType: ContentType = .unknown) throws -> Any?{
+	public func randomValue(ofType type: Any.Type,
+                            forPropertyNamed propertyName: String? = nil,
+                            withOwnerOfType ownerType: Any.Type? = nil,
+                            collectionSize: Int = 5,
+                            contentType: ContentType = .unknown) throws -> Any?{
 
 		let optionalHasValue = faker.number.randomBool()
 		switch type{
@@ -174,6 +178,17 @@ public class RandomEncodableGenerator{
 			return randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
 		case is URL.Type:
 			return randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
+        case is Array<Encodable>.Type:
+            var array: [Any] = []
+            for _ in 0...collectionSize {
+                if let value = try randomValue(ofType: type,
+                                               forPropertyNamed: propertyName,
+                                               withOwnerOfType: ownerType,
+                                               contentType: contentType) {
+                    array.append(value)
+                }
+            }
+            return array
 		case is Encodable.Type:
 			return try randomDictionary(decodableTo: type)
 		default:
@@ -198,7 +213,8 @@ public class RandomEncodableGenerator{
 		case .secondaryAddress:
 			return faker.address.secondaryAddress()
 		case .subLocality:
-			return faker.address.neighborhood()
+            return faker.address.county()
+//			return faker.address.neighborhood()
 		case .locality:
 			return faker.address.city()
 		case .subAdministrativeArea:
@@ -325,7 +341,8 @@ public class RandomEncodableGenerator{
 	public func randomDate(forContentType contentType: ContentType? = nil, named propertyName: String? = nil, withOwnerOfType ownerType: Any.Type? = nil) -> Date{
 		//		guard let contentType = contentType else{
 
-		let randomTime = TimeInterval(Random.int())
+        let int = Int.random(in: 1...999999999)
+		let randomTime = TimeInterval(int)
 		return Date(timeIntervalSince1970: randomTime)
 		//		}
 	}
