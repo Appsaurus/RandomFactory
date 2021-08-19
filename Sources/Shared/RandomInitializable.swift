@@ -80,12 +80,12 @@ public class RandomEncodableGenerator{
 		for property in try properties(type){
 			if let override = overrides?(property) {
 				if (override as? String) == RandomFactory.explicitNil{
-					if isOptionalType(property.type){
+//					if isOptionalType(property.type){
 						continue
-					}
-					else {
-						throw RandomValueGeneratorError.optionalityMismatch
-					}
+//					}
+//					else {
+//						throw RandomValueGeneratorError.optionalityMismatch
+//					}
 				}
 				dict[property.name] = override
 			}
