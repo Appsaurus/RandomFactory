@@ -28,7 +28,7 @@ extension RandomFactory{
 }
 public class RandomFactory{
 
-	public var generator: RandomEncodableGenerator
+	public var generator: RandomDataGenerator
 	public static let shared: RandomFactory = RandomFactory()
 
 
@@ -36,23 +36,23 @@ public class RandomFactory{
         let name = try! Runtime.typeInfo(of: enumType).name
         generator.config.enumFactory[name] = { E.allCases.randomElement()!.rawValue }
     }
-    public init(config: RandomEncodableGenerator.Config? = nil){
-        self.generator = RandomEncodableGenerator(config: config)
+    public init(config: RandomDataGenerator.Config? = nil){
+        self.generator = RandomDataGenerator(config: config)
 	}
-	public func randomEncodedData(decodableTo type: Any.Type, overrides: RandomValueGenerator? = nil) throws -> Data{
-        generator.config.overrides = overrides
+    public func randomEncodedData(decodableTo type: Any.Type) throws -> Data{
         return try generator.randomDictionary(decodableTo: type).encodeAsJSONData()
 	}
 
-	public func randomized<O: Decodable>(type: O.Type = O.self, overrides: RandomValueGenerator? = nil) throws -> O{
-		let data = try randomEncodedData(decodableTo: type, overrides: overrides)
+	public func randomized<O: Decodable>(type: O.Type = O.self) throws -> O{
+		let data = try randomEncodedData(decodableTo: type)
 		return try O.decode(fromJSON: data)
 	}
 
-	public func randomizedArray<O: Decodable>(of size: Int, elementType type: O.Type = O.self, overrides: RandomValueGenerator? = nil) throws -> [O]{
+	public func randomizedArray<O: Decodable>(of size: Int,
+                                              elementType type: O.Type = O.self) throws -> [O]{
 		var array: [O] = []
 		for _ in 1...size{
-			array.append(try randomized(type: type, overrides: overrides))
+			array.append(try randomized(type: type))
 		}
 		return array
 	}
@@ -67,7 +67,7 @@ extension PropertyInfo{
 	}
 }
 
-public class RandomEncodableGenerator{
+public class RandomDataGenerator{
 
     public class Config {
         var collectionSize: Int = 5
@@ -81,7 +81,7 @@ public class RandomEncodableGenerator{
 	private var parentCache: [String : ParentType] = [:]
 	private lazy var faker: Faker = Faker()
 
-    var config = Config()
+    public var config = Config()
 
     init(config: Config?) {
         if let config = config {
