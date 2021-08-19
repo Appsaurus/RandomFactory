@@ -9,6 +9,11 @@ import CoreLocation
 
 class SharedTests: XCTestCase {
 
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+//        try RandomFactory.shared.register(enumType: TestStringEnum.self)
+        try RandomFactory.shared.register(enumType: TestIntEnum.self)
+    }
 	func testRandomFactory() throws {
 		let count = 5
 		let users: [User] = try RandomFactory.shared.randomizedArray(of: count)
@@ -19,7 +24,7 @@ class SharedTests: XCTestCase {
 	}
 
     func testNestedArray() throws {
-        let count = 1
+        let count = 5
         let users: [Userbase] = try RandomFactory.shared.randomizedArray(of: count)
         XCTAssertEqual(users.count, count)
         for user in users{
@@ -31,8 +36,20 @@ class SharedTests: XCTestCase {
 open class Userbase: Codable{
     public var users: [User]
     public var name: String
+    public var enumArray: [TestStringEnum]
+    public var intEnumArray: [TestIntEnum]
+}
+public enum TestIntEnum: Int, Codable, CaseIterable {
+    case case1
+    case case2
+    case case3
 }
 
+public enum TestStringEnum: String, Codable, CaseIterable {
+    case case1
+    case case2
+    case case3
+}
 
 open class User: Codable{
 	public var name: Name

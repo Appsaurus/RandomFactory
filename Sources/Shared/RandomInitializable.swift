@@ -12,6 +12,7 @@ import Runtime
 import Fakery
 import PlaceholderImages
 import Avatars
+import Codability
 
 public typealias RandomInitializable = Decodable
 
@@ -30,6 +31,11 @@ public class RandomFactory{
 	public var generator: RandomEncodableGenerator
 	public static let shared: RandomFactory = RandomFactory()
 
+
+    public func register<E: CaseIterable & RawRepresentable>(enumType: E.Type) throws {
+        let name = try! Runtime.typeInfo(of: enumType).name
+        generator.enumFactory[name] = { E.allCases.randomElement()!.rawValue }
+    }
 	public init(maxKeywordDistance: Int? = nil){
 		self.generator = RandomEncodableGenerator(maxKeywordDistance: maxKeywordDistance)
 	}
@@ -54,7 +60,7 @@ public class RandomFactory{
 
 extension PropertyInfo{
 	public func hashKey() throws -> String {
-		return try typeInfo(of: ownerType).name + "_" + name
+        return try Runtime.typeInfo(of: ownerType).name + "_" + name
 	}
 }
 
@@ -63,6 +69,7 @@ public class RandomEncodableGenerator{
 	private var parentCache: [String : ParentType] = [:]
 	private lazy var faker: Faker = Faker()
 	public var maxKeywordDistance: Int?
+    var enumFactory: [String : () -> Any] = [:]
 
 	public init(maxKeywordDistance: Int? = nil){
 		self.maxKeywordDistance = maxKeywordDistance
@@ -85,22 +92,51 @@ public class RandomEncodableGenerator{
 
 			guard let randomValue = try randomValue(for: property) else { continue }
 			//			print("Setting random value \(randomValue) for property \(property.name)")
-			dict[property.name] = randomValue
+            dict[property.name] = randomValue
 		}
 		return dict
 	}
 
 	public func randomValue(for property: PropertyInfo, collectionSize: Int = 5, maxDistance: Int? = nil) throws -> Any?{
 		do{
-			if let genericInfo = try typeInfo(of: property.type).genericTypeInfo{
-				return try randomValue(ofGenericType: genericInfo, forProperty: property, maxDistance: maxDistance)
-			}
+            if try property.isArray(), let elementType = try property.elementTypeInfo() {
+                var array: [Any] = []
+                for _ in 0..<collectionSize {
+                    if elementType.isEnum() {
+                        if let randomCase = try randomEnumCase(for: elementType) {
+                            array.append(randomCase)
+                        }
+                    }
+                    else if let value = try randomValue(ofType: elementType.type, for: property, maxDistance: maxDistance) {
+                        array.append(value)
+                    }
+                }
+                return array
+            }
+            if try property.isEnum() {
+                return try randomEnumCase(for: try property.typeInfo())
+            }
 			return try randomValue(ofType: property.type, for: property, maxDistance: maxDistance)
 		}
 		catch{
 			return try randomValue(ofType: property.type, for: property, maxDistance: maxDistance)
 		}
 	}
+
+    public func randomEnumCase(for typeInfo: TypeInfo) throws -> Any?{
+        guard typeInfo.isEnum() else { return nil}
+
+
+        if let generator = self.enumFactory[typeInfo.name] {
+            let value = generator()
+            return value
+        }
+
+        guard let randomCase = typeInfo.cases.randomElement()?.name else {
+            return nil
+        }
+        return randomCase
+    }
 
 	public func contentType(forProperty property: PropertyInfo, maxDistance: Int? = nil) throws -> ContentType{
 		let hashKey = try property.hashKey()
@@ -122,21 +158,6 @@ public class RandomEncodableGenerator{
 		return cachedType
 	}
 
-	public func randomValue(ofGenericType type: GenericTypeInfo, forProperty property: PropertyInfo, maxDistance: Int? = nil) throws -> Any?{
-		switch type{
-		case .array(let elementType):
-			var arrayValue: [Any] = []
-			for _ in 0...3{
-				if let value = try randomValue(ofType: elementType, for: property, maxDistance: maxDistance){
-					arrayValue.append(value)
-				}
-			}
-			return arrayValue
-			//		default: return nil
-		}
-
-	}
-
 	public func randomValue(ofType type: Any.Type, for property: PropertyInfo, collectionSize: Int = 5, maxDistance: Int? = nil) throws -> Any?{
 		let contentType: ContentType = try self.contentType(forProperty: property, maxDistance: maxDistance)
 		return try randomValue(ofType: type, forPropertyNamed: property.name, withOwnerOfType: property.ownerType, contentType: contentType)
@@ -151,6 +172,7 @@ public class RandomEncodableGenerator{
                             contentType: ContentType = .unknown) throws -> Any?{
 
 		let optionalHasValue = faker.number.randomBool()
+
 		switch type{
 		case is Optional<String>.Type:
 			return optionalHasValue ? randomString(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType): nil
@@ -178,17 +200,17 @@ public class RandomEncodableGenerator{
 			return randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
 		case is URL.Type:
 			return randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
-        case is Array<Encodable>.Type:
-            var array: [Any] = []
-            for _ in 0...collectionSize {
-                if let value = try randomValue(ofType: type,
-                                               forPropertyNamed: propertyName,
-                                               withOwnerOfType: ownerType,
-                                               contentType: contentType) {
-                    array.append(value)
-                }
-            }
-            return array
+//        case is Array<Encodable>.Type:
+//            var array: [Any] = []
+//            for _ in 0...collectionSize {
+//                if let value = try randomValue(ofType: type,
+//                                               forPropertyNamed: propertyName,
+//                                               withOwnerOfType: ownerType,
+//                                               contentType: contentType) {
+//                    array.append(value)
+//                }
+//            }
+//            return array
 		case is Encodable.Type:
 			return try randomDictionary(decodableTo: type)
 		default:
@@ -422,17 +444,64 @@ class Levenshtein {
 	}
 }
 
-public enum GenericTypeInfo{
-	case array(elementType: Any.Type)
-}
-extension TypeInfo{
-	public var genericTypeInfo: GenericTypeInfo?{
-		if let genericType = genericTypes.first {
-			if name.starts(with: "Array<"){
-				return .array(elementType: genericType)
-			}
-		}
-		return nil
-	}
+
+extension PropertyInfo {
+    func typeInfo() throws -> TypeInfo {
+        try Runtime.typeInfo(of: type)
+    }
+
+    func isArray() throws -> Bool {
+        try typeInfo().isArray()
+    }
+
+    func elementTypeInfo() throws -> TypeInfo? {
+        try genericTypeInfo(at: 0)
+    }
+
+    func isEnum() throws -> Bool {
+        try typeInfo().isEnum()
+    }
+
+    func genericTypeInfo(at index: Int) throws -> TypeInfo? {
+        try typeInfo().genericTypeInfo(at: index)
+    }
+
+    func genericTypes() throws -> [Any.Type] {
+        try typeInfo().genericTypes
+    }
+
+    func genericType(at index: Int) throws -> Any.Type? {
+        try typeInfo().genericType(at: index)
+    }
 }
 
+
+extension TypeInfo {
+    func isArray() -> Bool {
+        mangledName == "Array"
+    }
+
+    func elementTypeInfo() throws -> TypeInfo? {
+        try genericTypeInfo(at: 0)
+    }
+
+    func isEnum() -> Bool {
+        numberOfEnumCases > 0
+    }
+
+    func genericTypeInfo(at index: Int) throws -> TypeInfo? {
+        guard let genericType = try genericType(at: index) else {
+            return nil
+        }
+
+        return try Runtime.typeInfo(of: genericType)
+    }
+
+
+    func genericType(at index: Int) throws -> Any.Type? {
+        guard genericTypes.count > index else {
+            return nil
+        }
+        return genericTypes[index]
+    }
+}
