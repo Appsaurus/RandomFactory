@@ -74,6 +74,8 @@ public class RandomDataGenerator{
         public var overrides: RandomValueGenerator? = nil
         public var enumFactory: [String : () -> Any] = [:]
         public var codableKeyMapper: (String) -> String = { $0 }
+
+        public init() {}
     }
 
 	private var cache: [String : ContentType] = [:]
