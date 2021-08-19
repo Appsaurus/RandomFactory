@@ -88,10 +88,11 @@ public class RandomEncodableGenerator{
 //					}
 				}
 				dict[property.name] = override
+                continue
 			}
 
 			guard let randomValue = try randomValue(for: property) else { continue }
-			//			print("Setting random value \(randomValue) for property \(property.name)")
+            print("Setting random value \(randomValue) for property \(property.name)")
             dict[property.name] = randomValue
 		}
 		return dict
