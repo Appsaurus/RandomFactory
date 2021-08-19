@@ -99,18 +99,13 @@ public class RandomEncodableGenerator{
 	}
 
 	public func randomValue(for property: PropertyInfo, collectionSize: Int = 5, maxDistance: Int? = nil) throws -> Any?{
-		do{
-            if try property.isArray(), let elementType = try property.elementTypeInfo() {
-                return try randomArray(ofType: elementType, for: property, ofSize: collectionSize, maxDistance: maxDistance)
-            }
-            if try property.isEnum() {
-                return try randomEnumCase(for: try property.typeInfo())
-            }
-			return try randomValue(ofType: property.type, for: property, maxDistance: maxDistance)
-		}
-		catch{
-			return try randomValue(ofType: property.type, for: property, maxDistance: maxDistance)
-		}
+        if (try? property.isArray()) == true, let elementType = try? property.elementTypeInfo() {
+            return try randomArray(ofType: elementType, for: property, ofSize: collectionSize, maxDistance: maxDistance)
+        }
+        if (try? property.isEnum()) == true {
+            return try randomEnumCase(for: try property.typeInfo())
+        }
+        return try randomValue(ofType: property.type, for: property, maxDistance: maxDistance)
 	}
     public func randomArray(ofType elementType: TypeInfo,
                             for property: PropertyInfo? = nil,
@@ -184,6 +179,15 @@ public class RandomEncodableGenerator{
                             for property: PropertyInfo? = nil,
                             collectionSize: Int = 5,
                             contentType: ContentType = .unknown) throws -> Any?{
+
+        if let typeInfo = try? Runtime.typeInfo(of: type) {
+            if typeInfo.isArray(), let elementType = try typeInfo.elementTypeInfo() {
+                return try randomArray(ofType: elementType, for: property, ofSize: collectionSize)
+            }
+            if typeInfo.isEnum() {
+                return try randomEnumCase(for: typeInfo)
+            }
+        }
 
 		let optionalHasValue = faker.number.randomBool()
         let propertyName = property?.name
