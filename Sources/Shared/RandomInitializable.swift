@@ -68,13 +68,12 @@ extension PropertyInfo{
 }
 
 public class RandomDataGenerator{
-
     public class Config {
-        var collectionSize: Int = 5
-        var maxKeywordDistance: Int? = nil
-        var overrides: RandomValueGenerator? = nil
-        var enumFactory: [String : () -> Any] = [:]
-        var codableKeyMapper: (String) -> String = { $0 }
+        public var collectionSize: Int = 5
+        public var maxKeywordDistance: Int? = nil
+        public var overrides: RandomValueGenerator? = nil
+        public var enumFactory: [String : () -> Any] = [:]
+        public var codableKeyMapper: (String) -> String = { $0 }
     }
 
 	private var cache: [String : ContentType] = [:]
