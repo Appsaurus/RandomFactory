@@ -82,7 +82,7 @@ public class RandomDataGenerator{
 
     public var config = Config()
 
-    init(config: Config?) {
+    public init(config: Config?) {
         if let config = config {
             self.config = config
         }
