@@ -74,6 +74,7 @@ public class RandomEncodableGenerator{
         var maxKeywordDistance: Int? = nil
         var overrides: RandomValueGenerator? = nil
         var enumFactory: [String : () -> Any] = [:]
+        var codableKeyMapper: (String) -> String = { $0 }
     }
 
 	private var cache: [String : ContentType] = [:]
@@ -91,6 +92,7 @@ public class RandomEncodableGenerator{
 		var dict: AnyDictionary = [:]
 
 		for property in try properties(type){
+            let key = config.codableKeyMapper(property.name)
             if let override = config.overrides?(property) {
 				if (override as? String) == RandomFactory.explicitNil{
 //					if isOptionalType(property.type){
@@ -100,13 +102,13 @@ public class RandomEncodableGenerator{
 //						throw RandomValueGeneratorError.optionalityMismatch
 //					}
 				}
-				dict[property.name] = override
+				dict[key] = override
                 continue
 			}
 
 			guard let randomValue = try randomValue(for: property) else { continue }
             print("Setting random value \(randomValue) for property \(property.name)")
-            dict[property.name] = randomValue
+            dict[key] = randomValue
 		}
 		return dict
 	}
