@@ -36,6 +36,7 @@ class SharedTests: XCTestCase {
 open class Userbase: Codable{
     public var users: [User]
     public var name: String
+    public var dates: [Date]
     public var enumArray: [TestStringEnum]
     public var intEnumArray: [TestIntEnum]
 }
