@@ -40,7 +40,7 @@ public class RandomFactory{
         self.generator = RandomDataGenerator(config: config)
 	}
     public func randomEncodedData(decodableTo type: Any.Type) throws -> Data{
-        return try generator.randomDictionary(decodableTo: type).encodeAsJSONData()
+        return try generator.randomEncodedData(decodableTo: type)
 	}
 
 	public func randomized<O: Decodable>(type: O.Type = O.self) throws -> O{
@@ -74,6 +74,7 @@ public class RandomDataGenerator{
         public var overrides: RandomValueGenerator? = nil
         public var enumFactory: [String : () -> Any] = [:]
         public var codableKeyMapper: (String) -> String = { $0 }
+        public var jsonEncoder = JSONEncoder(.iso8601)
 
         public init() {}
     }
@@ -88,6 +89,10 @@ public class RandomDataGenerator{
         if let config = config {
             self.config = config
         }
+    }
+
+    public func randomEncodedData(decodableTo type: Any.Type) throws -> Data{
+        return try randomDictionary(decodableTo: type).encodeAsJSONData(using: config.jsonEncoder)
     }
     public func randomDictionary(decodableTo type: Any.Type) throws -> AnyDictionary{
 		var dict: AnyDictionary = [:]
