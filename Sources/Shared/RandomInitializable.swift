@@ -39,13 +39,11 @@ extension RandomFactory{
 	public static let explicitNil = "RandomFactory.ExplicitNilValue"
 }
 
-public class RandomFactory{
-    public static let shared: RandomFactory = RandomFactory()
-    public var config: Config = Config()
-
-    private lazy var faker: Faker = Faker()
-    private var cache: [String : ContentType] = [:]
-    private var parentCache: [String : ParentType] = [:]
+open class RandomFactory{
+    open var config: Config = Config()
+    open lazy var faker: Faker = Faker()
+    open var cache: [String : ContentType] = [:]
+    open var parentCache: [String : ParentType] = [:]
 
 
 
@@ -55,21 +53,21 @@ public class RandomFactory{
         }
     }
 
-    public func register<E: CaseIterable & RawRepresentable>(enumType: E.Type) throws {
+    open func register<E: CaseIterable & RawRepresentable>(enumType: E.Type) throws {
         let name = try! Runtime.typeInfo(of: enumType).name
         config.enumFactory[name] = { E.allCases.randomElement()!.rawValue }
     }
 
-    public func randomEncodedData(decodableTo type: Any.Type) throws -> Data{
+    open func randomEncodedData(decodableTo type: Any.Type) throws -> Data{
         return try randomDictionary(decodableTo: type).encodeAsJSONData(using: config.jsonEncoder)
     }
 
-	public func randomized<O: Decodable>(type: O.Type = O.self) throws -> O{
+    open func randomized<O: Decodable>(type: O.Type = O.self) throws -> O{
 		let data = try randomEncodedData(decodableTo: type)
         return try O.decode(fromJSON: data, using: config.jsonDecoder)
 	}
 
-	public func randomizedArray<O: Decodable>(of size: Int,
+    open func randomizedArray<O: Decodable>(of size: Int,
                                               elementType type: O.Type = O.self) throws -> [O]{
 		var array: [O] = []
 		for _ in 1...size{
@@ -78,7 +76,7 @@ public class RandomFactory{
 		return array
 	}
 
-    public func randomDictionary(decodableTo type: Any.Type) throws -> AnyDictionary{
+    open func randomDictionary(decodableTo type: Any.Type) throws -> AnyDictionary{
         var dict: AnyDictionary = [:]
 
         for property in try properties(type){

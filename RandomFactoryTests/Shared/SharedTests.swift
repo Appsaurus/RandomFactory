@@ -8,15 +8,16 @@ import CoreLocation
 #endif
 
 class SharedTests: XCTestCase {
+    let factory = RandomFactory()
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-//        try RandomFactory.shared.register(enumType: TestStringEnum.self)
-        try RandomFactory.shared.register(enumType: TestIntEnum.self)
+//        try factor.register(enumType: TestStringEnum.self)
+        try factory.register(enumType: TestIntEnum.self)
     }
 	func testRandomFactory() throws {
 		let count = 5
-		let users: [User] = try RandomFactory.shared.randomizedArray(of: count)
+		let users: [User] = try factory.randomizedArray(of: count)
 		XCTAssertEqual(users.count, count)
 		for user in users{
 			try user.toAnyDictionary().printPrettyJSONString()
@@ -25,7 +26,7 @@ class SharedTests: XCTestCase {
 
     func testNestedArray() throws {
         let count = 5
-        let users: [Userbase] = try RandomFactory.shared.randomizedArray(of: count)
+        let users: [Userbase] = try factory.randomizedArray(of: count)
         XCTAssertEqual(users.count, count)
         for user in users{
             try user.toAnyDictionary().printPrettyJSONString()
