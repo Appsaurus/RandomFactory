@@ -17,9 +17,9 @@ import Codability
 public typealias RandomInitializable = Decodable
 
 public enum RandomValueGeneratorError : Error {
-	case typeMismatch
-	case unencodable
-	case optionalityMismatch
+    case typeMismatch
+    case unencodable
+    case optionalityMismatch
 }
 
 public typealias RandomValueGenerator = (PropertyInfo) -> Any?
@@ -36,7 +36,7 @@ extension RandomFactory{
 
         public init() {}
     }
-	public static let explicitNil = "RandomFactory.ExplicitNilValue"
+    public static let explicitNil = "RandomFactory.ExplicitNilValue"
 }
 
 open class RandomFactory{
@@ -63,45 +63,43 @@ open class RandomFactory{
     }
 
     open func randomized<O: Decodable>(type: O.Type = O.self) throws -> O{
-		let data = try randomEncodedData(decodableTo: type)
+        let data = try randomEncodedData(decodableTo: type)
         return try O.decode(fromJSON: data, using: config.jsonDecoder)
-	}
+    }
 
     open func randomizedArray<O: Decodable>(of size: Int,
-                                              elementType type: O.Type = O.self) throws -> [O]{
-		var array: [O] = []
-		for _ in 1...size{
-			array.append(try randomized(type: type))
-		}
-		return array
-	}
+                                            elementType type: O.Type = O.self) throws -> [O]{
+        var array: [O] = []
+        for _ in 1...size{
+            array.append(try randomized(type: type))
+        }
+        return array
+    }
 
     open func randomDictionary(decodableTo type: Any.Type) throws -> AnyDictionary{
         var dict: AnyDictionary = [:]
 
         for property in try properties(type){
             let key = config.codableKeyMapper(property.name)
-            if let override = config.overrides?(property) {
-                if (override as? String) == RandomFactory.explicitNil{
-//                    if isOptionalType(property.type){
-                        continue
-//                    }
-//                    else {
-//                        throw RandomValueGeneratorError.optionalityMismatch
-//                    }
-                }
-                dict[key] = override
+            guard let generatedValue = try generateValue(for: property) else { continue }
+            if let value = generatedValue as? String, value == RandomFactory.explicitNil {
                 continue
             }
-
-            guard let randomValue = try randomValue(for: property) else { continue }
-            print("Setting random value \(randomValue) for property \(property.name)")
-            dict[key] = randomValue
+            dict[key] = generatedValue
         }
         return dict
     }
 
-    public func randomValue(for property: PropertyInfo) throws -> Any?{
+    open func generateValue(for property: PropertyInfo) throws -> Any?{
+        if let override = config.overrides?(property) {
+            return override
+        }
+
+        guard let randomValue = try randomValue(for: property) else { return nil }
+        return randomValue
+    }
+
+    open func randomValue(for property: PropertyInfo) throws -> Any?{
         if (try? property.isArray()) == true, let elementType = try? property.elementTypeInfo() {
             return try randomArray(ofType: elementType, for: property)
         }
@@ -110,8 +108,8 @@ open class RandomFactory{
         }
         return try randomValue(ofType: property.type, for: property)
     }
-    public func randomArray(ofType elementType: TypeInfo,
-                            for property: PropertyInfo? = nil) throws -> Any? {
+    open func randomArray(ofType elementType: TypeInfo,
+                          for property: PropertyInfo? = nil) throws -> Any? {
         var array: [Any] = []
         for _ in 0..<config.collectionSize {
             if elementType.isEnum() {
@@ -126,7 +124,7 @@ open class RandomFactory{
         }
         return array
     }
-    public func randomEnumCase(for typeInfo: TypeInfo) throws -> Any?{
+    open func randomEnumCase(for typeInfo: TypeInfo) throws -> Any?{
         guard typeInfo.isEnum() else { return nil}
 
 
@@ -141,7 +139,7 @@ open class RandomFactory{
         return randomCase
     }
 
-    public func contentType(forProperty property: PropertyInfo, maxDistance: Int? = nil) throws -> ContentType{
+    open func contentType(forProperty property: PropertyInfo, maxDistance: Int? = nil) throws -> ContentType{
         let hashKey = try property.hashKey()
         guard let cachedType = cache[hashKey] else{
             let calculatedType = ContentType.closestMatch(ofString: property.name, maxDistance: maxDistance ?? config.maxKeywordDistance)
@@ -151,7 +149,7 @@ open class RandomFactory{
         return cachedType
     }
 
-    public func parentType(forClass classType: Any.Type, maxDistance: Int? = nil) throws -> ParentType{
+    open func parentType(forClass classType: Any.Type, maxDistance: Int? = nil) throws -> ParentType{
         let hashKey = String(describing: classType)
         guard let cachedType = parentCache[hashKey] else{
             let calculatedType = ParentType.closestMatch(ofString: hashKey, maxDistance: maxDistance ?? config.maxKeywordDistance)
@@ -161,21 +159,21 @@ open class RandomFactory{
         return cachedType
     }
 
-    public func randomValue(ofType type: Any.Type,
-                            for property: PropertyInfo? = nil) throws -> Any?{
+    open func randomValue(ofType type: Any.Type,
+                          for property: PropertyInfo? = nil) throws -> Any?{
         var contentType: ContentType = .unknown
         if let property =  property {
             contentType = try self.contentType(forProperty: property, maxDistance: config.maxKeywordDistance)
         }
         return try randomValue(ofType: type,
-                                         for: property,
-                                         contentType: contentType)
+                               for: property,
+                               contentType: contentType)
 
     }
 
-    public func randomValue(ofType type: Any.Type,
-                            for property: PropertyInfo? = nil,
-                            contentType: ContentType = .unknown) throws -> Any?{
+    open func randomValue(ofType type: Any.Type,
+                          for property: PropertyInfo? = nil,
+                          contentType: ContentType = .unknown) throws -> Any?{
 
         if let typeInfo = try? Runtime.typeInfo(of: type) {
             if typeInfo.isArray(), let elementType = try typeInfo.elementTypeInfo() {
@@ -247,7 +245,7 @@ open class RandomFactory{
             return faker.address.secondaryAddress()
         case .subLocality:
             return faker.address.county()
-//            return faker.address.neighborhood()
+        //            return faker.address.neighborhood()
         case .locality:
             return faker.address.city()
         case .subAdministrativeArea:
@@ -410,9 +408,9 @@ open class RandomFactory{
 
 
 extension PropertyInfo{
-	public func hashKey() throws -> String {
+    public func hashKey() throws -> String {
         return try Runtime.typeInfo(of: ownerType).name + "_" + name
-	}
+    }
 }
 
 //Workaround for swift's lack of covariance and contravariance on Optional type
@@ -422,52 +420,52 @@ fileprivate protocol OptionalProtocol {}
 extension Optional : OptionalProtocol {}
 
 fileprivate func isOptional(_ instance: Any) -> Bool {
-	return instance is OptionalProtocol
+    return instance is OptionalProtocol
 }
 
 fileprivate func isOptionalType(_ type: Any.Type) -> Bool {
-	return type is OptionalProtocol.Type
+    return type is OptionalProtocol.Type
 }
 
 
 extension String{
 
-	public func equals(anyOf collection: Set<String>) -> Bool{
-		return collection.contains(self)
-	}
-	public func isSubstringOf(anyOf collection: Set<String>) -> Bool{
-		return collection.joined(separator: "_").lowercased().contains(self.lowercased())
-	}
+    public func equals(anyOf collection: Set<String>) -> Bool{
+        return collection.contains(self)
+    }
+    public func isSubstringOf(anyOf collection: Set<String>) -> Bool{
+        return collection.joined(separator: "_").lowercased().contains(self.lowercased())
+    }
 }
 
 
 class Levenshtein {
-	private(set) var cache = [Set<String.SubSequence>: Int]()
+    private(set) var cache = [Set<String.SubSequence>: Int]()
 
-	public func calculateDistance(a: String, b: String) -> Int {
-		return calculateDistance(a: String.SubSequence(a), b: String.SubSequence(b))
-	}
-	public func calculateDistance(a: String.SubSequence, b: String.SubSequence) -> Int {
-		let key = Set([a, b])
-		if let distance = cache[key] {
-			return distance
-		} else {
-			let distance: Int = {
-				if a.count == 0 || b.count == 0 {
-					return abs(a.count - b.count)
-				} else if a.first == b.first {
-					return calculateDistance(a: a[a.index(after: a.startIndex)...], b: b[b.index(after: b.startIndex)...])
-				} else {
-					let add = calculateDistance(a: a, b: b[b.index(after: b.startIndex)...])
-					let replace = calculateDistance(a: a[a.index(after: a.startIndex)...], b: b[b.index(after: b.startIndex)...])
-					let delete = calculateDistance(a: a[a.index(after: a.startIndex)...], b: b)
-					return min(add, replace, delete) + 1
-				}
-			}()
-			cache[key] = distance
-			return distance
-		}
-	}
+    public func calculateDistance(a: String, b: String) -> Int {
+        return calculateDistance(a: String.SubSequence(a), b: String.SubSequence(b))
+    }
+    public func calculateDistance(a: String.SubSequence, b: String.SubSequence) -> Int {
+        let key = Set([a, b])
+        if let distance = cache[key] {
+            return distance
+        } else {
+            let distance: Int = {
+                if a.count == 0 || b.count == 0 {
+                    return abs(a.count - b.count)
+                } else if a.first == b.first {
+                    return calculateDistance(a: a[a.index(after: a.startIndex)...], b: b[b.index(after: b.startIndex)...])
+                } else {
+                    let add = calculateDistance(a: a, b: b[b.index(after: b.startIndex)...])
+                    let replace = calculateDistance(a: a[a.index(after: a.startIndex)...], b: b[b.index(after: b.startIndex)...])
+                    let delete = calculateDistance(a: a[a.index(after: a.startIndex)...], b: b)
+                    return min(add, replace, delete) + 1
+                }
+            }()
+            cache[key] = distance
+            return distance
+        }
+    }
 }
 
 
