@@ -25,7 +25,7 @@ public enum RandomValueGeneratorError : Error {
 public typealias RandomValueGenerator = (PropertyInfo) -> Any?
 
 extension RandomFactory{
-    public class Config {
+    open class Config {
         public var collectionSize: Int = 5
         public var maxKeywordDistance: Int? = nil
         public var overrides: RandomValueGenerator? = nil
