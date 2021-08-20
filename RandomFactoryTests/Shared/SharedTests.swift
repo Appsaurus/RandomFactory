@@ -53,6 +53,7 @@ public enum TestStringEnum: String, Codable, CaseIterable {
 }
 
 open class User: Codable{
+    public var id: UUID
 	public var name: Name
 	public var username: String
 	public var email: String

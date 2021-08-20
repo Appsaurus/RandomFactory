@@ -204,6 +204,8 @@ public class RandomFactory{
             return optionalHasValue ? randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
         case is Optional<URL>.Type:
             return optionalHasValue ? randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType) : nil
+        case is Optional<UUID>.Type:
+            return optionalHasValue ? UUID().uuid : nil
         case is Optional<Encodable>.Type:
             return optionalHasValue ? try randomDictionary(decodableTo: type) : nil
         case is String.Type:
@@ -218,6 +220,8 @@ public class RandomFactory{
             return randomDate(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
         case is URL.Type:
             return randomURL(forContentType: contentType, named: propertyName, withOwnerOfType: ownerType)
+        case is UUID.Type:
+            return UUID().uuidString
         case is Array<Encodable>.Type:
             return try randomArray(ofType: try typeInfo(of: type), for: property)
         case is Encodable.Type:
