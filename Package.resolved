@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/Appsaurus/CodableExtensions",
         "state": {
           "branch": null,
-          "revision": "4b8e1fafe94ac99fa53118d63a1ce8b7f075fa67",
-          "version": "1.0.0"
+          "revision": "281dba14bbb7a4dfba3a2b1c72f7b9407e15ddab",
+          "version": "1.0.8"
         }
       },
       {
@@ -60,8 +60,8 @@
         "repositoryURL": "https://github.com/Appsaurus/RuntimeExtensions",
         "state": {
           "branch": null,
-          "revision": "f47b6e7e21e0fb5dc5785b77a1cac9a35dbe28e3",
-          "version": "0.1.6"
+          "revision": "362eeb8bead1cc92feeb251201728b9e6ffc6554",
+          "version": "0.1.8"
         }
       },
       {

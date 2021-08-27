@@ -413,21 +413,6 @@ extension PropertyInfo{
     }
 }
 
-//Workaround for swift's lack of covariance and contravariance on Optional type
-//Allows for check like '<type> is OptionalProtocol' or 'isOptional(instance)
-fileprivate protocol OptionalProtocol {}
-
-extension Optional : OptionalProtocol {}
-
-fileprivate func isOptional(_ instance: Any) -> Bool {
-    return instance is OptionalProtocol
-}
-
-fileprivate func isOptionalType(_ type: Any.Type) -> Bool {
-    return type is OptionalProtocol.Type
-}
-
-
 extension String{
 
     public func equals(anyOf collection: Set<String>) -> Bool{
@@ -465,67 +450,5 @@ class Levenshtein {
             cache[key] = distance
             return distance
         }
-    }
-}
-
-
-extension PropertyInfo {
-    func typeInfo() throws -> TypeInfo {
-        try Runtime.typeInfo(of: type)
-    }
-
-    func isArray() throws -> Bool {
-        try typeInfo().isArray()
-    }
-
-    func elementTypeInfo() throws -> TypeInfo? {
-        try genericTypeInfo(at: 0)
-    }
-
-    func isEnum() throws -> Bool {
-        try typeInfo().isEnum()
-    }
-
-    func genericTypeInfo(at index: Int) throws -> TypeInfo? {
-        try typeInfo().genericTypeInfo(at: index)
-    }
-
-    func genericTypes() throws -> [Any.Type] {
-        try typeInfo().genericTypes
-    }
-
-    func genericType(at index: Int) throws -> Any.Type? {
-        try typeInfo().genericType(at: index)
-    }
-}
-
-
-extension TypeInfo {
-    func isArray() -> Bool {
-        mangledName == "Array"
-    }
-
-    func elementTypeInfo() throws -> TypeInfo? {
-        try genericTypeInfo(at: 0)
-    }
-
-    func isEnum() -> Bool {
-        numberOfEnumCases > 0
-    }
-
-    func genericTypeInfo(at index: Int) throws -> TypeInfo? {
-        guard let genericType = try genericType(at: index) else {
-            return nil
-        }
-
-        return try Runtime.typeInfo(of: genericType)
-    }
-
-
-    func genericType(at index: Int) throws -> Any.Type? {
-        guard genericTypes.count > index else {
-            return nil
-        }
-        return genericTypes[index]
     }
 }
