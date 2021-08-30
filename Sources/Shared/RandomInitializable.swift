@@ -100,10 +100,14 @@ open class RandomFactory{
     }
 
     open func randomValue(for property: PropertyInfo) throws -> Any?{
-        if (try? property.isArray()) == true, let elementType = try? property.elementTypeInfo() {
+        if property.isArray, let elementType = property.genericTypeInfo(at: 0) {
             return try randomArray(ofType: elementType, for: property)
         }
-        if (try? property.isEnum()) == true {
+        if property.isEnum {
+            return try randomEnumCase(for: try property.typeInfo())
+        }
+
+        if property.isDictionary{
             return try randomEnumCase(for: try property.typeInfo())
         }
         return try randomValue(ofType: property.type, for: property)
@@ -112,7 +116,7 @@ open class RandomFactory{
                           for property: PropertyInfo? = nil) throws -> Any? {
         var array: [Any] = []
         for _ in 0..<config.collectionSize {
-            if elementType.isEnum() {
+            if elementType.isEnum {
                 if let randomCase = try randomEnumCase(for: elementType) {
                     array.append(randomCase)
                 }
@@ -125,7 +129,7 @@ open class RandomFactory{
         return array
     }
     open func randomEnumCase(for typeInfo: TypeInfo) throws -> Any?{
-        guard typeInfo.isEnum() else { return nil}
+        guard typeInfo.isEnum else { return nil}
 
 
         if let generator = config.enumFactory[typeInfo.name] {
@@ -176,10 +180,10 @@ open class RandomFactory{
                           contentType: ContentType = .unknown) throws -> Any?{
 
         if let typeInfo = try? Runtime.typeInfo(of: type) {
-            if typeInfo.isArray(), let elementType = try typeInfo.elementTypeInfo() {
+            if typeInfo.isArray, let elementType = typeInfo.genericTypeInfo(at: 0) {
                 return try randomArray(ofType: elementType, for: property)
             }
-            if typeInfo.isEnum() {
+            if typeInfo.isEnum {
                 return try randomEnumCase(for: typeInfo)
             }
         }
